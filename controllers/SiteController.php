@@ -49,7 +49,17 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+    	Yii::$app->view->registerCssFile('/css/animate.min.css');
+    	Yii::$app->view->registerCssFile('/css/swiper.min.css');
+    	Yii::$app->view->registerJsFile('/js/jquery.min.js');
+    	Yii::$app->view->registerJsFile('/js/swiper.min.js');
+    	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
+    	Yii::$app->view->registerJsFile('/js/zepto.min.js');
         return $this->render('index');
+    }
+    
+    public function actionPartner() {
+    	return $this->render('partner');
     }
 
     public function actionLogin()
@@ -86,7 +96,28 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
+    public function actionNews()
+    {
+    	Yii::$app->view->registerCssFile('/css/animate.min.css');
+    	Yii::$app->view->registerCssFile('/css/swiper.min.css');
+    	Yii::$app->view->registerJsFile('/js/jquery.min.js');
+    	Yii::$app->view->registerJsFile('/js/swiper.min.js');
+    	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
+    	Yii::$app->view->registerJsFile('/js/zepto.min.js');
+    	return $this->render('news');
+    }
+    public function actionCase() {
+    	Yii::$app->view->registerCssFile('/css/animate.min.css');
+    	Yii::$app->view->registerCssFile('/css/swiper.min.css');
+    	Yii::$app->view->registerJsFile('/js/jquery.min.js');
+    	Yii::$app->view->registerJsFile('/js/swiper.min.js');
+    	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
+    	Yii::$app->view->registerJsFile('/js/zepto.min.js');
+    	return $this->render('case');
+    }
+    public function actionPeople() {
+    	return $this->render('people');
+    }
     public function actionAbout()
     {
         return $this->render('about');
