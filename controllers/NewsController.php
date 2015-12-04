@@ -64,13 +64,17 @@ class NewsController extends Controller
     {
         $model = new News();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
+        if ($model->load(Yii::$app->request->post())) {
+        	$model->date = $_SERVER['REQUEST_TIME'];
+        	if (!$model->from)
+        		$model->from = '正晖资本';
+        	if ($model->save()) {
+        		return $this->redirect(['view', 'id' => $model->id]);
+        	}
         }
+        return $this->render('create', [
+            'model' => $model,
+        ]);
     }
 
     /**

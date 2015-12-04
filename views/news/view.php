@@ -15,14 +15,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('更新', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('删除', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => '你真的要删除这个首页模板吗?',
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('返回列表页', ['index'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= DetailView::widget([
@@ -32,9 +33,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'auth',
             'from',
-            'date',
-            'content:ntext',
-            'type',
+        	[
+        		'format' => 'raw',
+        		'label' => '发布日期',
+        		'value' => date('Y-m-d H:i:s', $model->date)
+        	],
+            'content:raw',
+        	[
+        		'label' => '分类',
+        		'value' => $model->getType()
+        	],
         ],
     ]) ?>
 

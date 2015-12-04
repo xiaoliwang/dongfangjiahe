@@ -29,9 +29,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'auth',
             'from',
-            'date',
-            // 'content:ntext',
-            // 'type',
+            [
+            	'attribute' => 'date',
+        		'label' => '发布日期',
+        		'value' => function($model){
+        			return date('Y-m-d', $model->date);
+       			}
+        	],
+            [
+            	'attribute' => 'type',
+            	'label' => '分类',
+        		'value' => function($model){
+        			return $model->getType();
+   				},
+   				'filter' => [1 => '公司动态', 2 => '行业资讯', 3 => '基金公告'],
+        	],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -18,8 +18,8 @@ class NewsSearch extends News
     public function rules()
     {
         return [
-            [['id', 'date', 'type'], 'integer'],
-            [['title', 'auth', 'from', 'content'], 'safe'],
+            [['id', 'type'], 'integer'],
+            [['title', 'auth', 'date', 'from', 'content'], 'safe'],
         ];
     }
 
@@ -57,13 +57,24 @@ class NewsSearch extends News
 
         $query->andFilterWhere([
             'id' => $this->id,
-            'date' => $this->date,
             'type' => $this->type,
         ]);
-
+		
+        if ($this->date) {
+        	$date = \DateTime::createFromFormat('Y-m-d', $this->date);
+        	$date->setTime(0,0,0);
+        	$unixDateStart = $date->getTimeStamp();
+        	$date->add(new \DateInterval('P1D'));
+        	$date->sub(new \DateInterval('PT1S'));
+        	$unixDateEnd = $date->getTimeStamp();
+        	$query->andFilterWhere(['between', 'date', $unixDateStart, $unixDateEnd]);
+        }
+        
+        
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'auth', $this->auth])
             ->andFilterWhere(['like', 'from', $this->from])
+            //->andFilterWhere(['between', 'date', $this->start_date, $this->end_date])
             ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;

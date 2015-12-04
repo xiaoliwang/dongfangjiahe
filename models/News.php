@@ -34,7 +34,8 @@ class News extends \yii\db\ActiveRecord
             [['date', 'type'], 'integer'],
             [['content'], 'string'],
             [['title', 'auth'], 'string', 'max' => 50],
-            [['from'], 'string', 'max' => 100]
+            [['from'], 'string', 'max' => 100],
+        	[['title', 'auth', 'content'], 'required']
         ];
     }
 
@@ -52,5 +53,19 @@ class News extends \yii\db\ActiveRecord
             'content' => '正文',
             'type' => '分类',
         ];
+    }
+    
+    public function getType()
+    {
+    	switch ($this->type) {
+    		case 2:
+    			return '行业资讯';
+    			break;
+    		case 3:
+    			return '基金公告';
+    			break;
+    		default:
+    			return '公司动态';
+    	}
     }
 }
