@@ -13,7 +13,7 @@ namespace app\models;
  * @property string $pic
  * @property integer $used
  */
-class FrontPage extends \yii\db\ActiveRecord
+class Frontpage extends \yii\db\ActiveRecord
 {
     public $file;
     
