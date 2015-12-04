@@ -12,11 +12,19 @@ $config = [
             'cookieValidationKey' => 'xOe4xW-_9MQLkc8McWrNNTQljFegLMdL',
         ],
     	'urlManager' => [
+<<<<<<< HEAD
+    		'enablePrettyUrl' => true,
+    		'showScriptName' => false,
+    		'rules' => [
+    			'<controller:\w+>/<action:\w+>' => '<controller>/<action>'
+    		]	
+=======
     			'enablePrettyUrl' => true,
     			'showScriptName' => false,
     			'rules' => [
     					'<controller:\w+>/<action:\w+>' => '<controller>/<action>'
     			]
+>>>>>>> 45ff2ffb43715bcd730fa2bc8ef21813d2943f33
     	],
         'cache' => [
             'class' => 'yii\caching\FileCache',
