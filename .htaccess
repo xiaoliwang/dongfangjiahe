@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <IfModule rewrite_module>
     Options +FollowSymLinks
     IndexIgnore */*
@@ -7,14 +6,4 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule . /index.php
-=======
-<IfModule rewrite_module>
-    Options +FollowSymLinks
-    IndexIgnore */*
-    RewriteEngine On
-
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index.php
->>>>>>> 45ff2ffb43715bcd730fa2bc8ef21813d2943f33
 </IfModule>

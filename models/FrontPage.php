@@ -2,19 +2,21 @@
 
 namespace app\models;
 
-use Yii;
 
 /**
  * This is the model class for table "front_page".
  *
  * @property integer $id
  * @property string $title
+ * @property string $summary
  * @property string $link
  * @property string $pic
  * @property integer $used
  */
 class FrontPage extends \yii\db\ActiveRecord
 {
+    public $file;
+    
     /**
      * @inheritdoc
      */
@@ -30,8 +32,10 @@ class FrontPage extends \yii\db\ActiveRecord
     {
         return [
             [['used'], 'integer'],
-            [['title'], 'string', 'max' => 150],
-            [['link', 'pic'], 'string', 'max' => 255]
+            [['title'], 'string', 'max' => 50],
+            [['summary', 'link', 'pic'], 'string', 'max' => 255],
+        	[['link'], 'url', 'defaultScheme' => 'http'],
+        	[['title', 'summary', 'link', 'pic'], 'required']
         ];
     }
 
@@ -42,10 +46,12 @@ class FrontPage extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'link' => 'Link',
-            'pic' => 'Pic',
-            'used' => 'Used',
+            'title' => '标题',
+            'summary' => '简介',
+            'link' => '链接',
+            'pic' => '图片',
+            'used' => '是否使用',
+        	'file' => '首页banner图'
         ];
     }
 }

@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Frontpage */
+/* @var $model app\models\Member */
 
-$this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Frontpages', 'url' => ['index']];
+$this->title = $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Members', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="frontpage-view">
+<div class="member-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('删除', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => '你真的要删除这个首页模板吗?',
+                'confirm' => '你真的要删除这个成员吗?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -30,22 +30,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'title',
-            'summary',
-            [
-        		'format' => 'raw',
-        		'label' => '链接',
-        		'value' => Html::a($model->link, $model->link)
-        	],
+            'name',
         	[
         		'label' => '图片',
         		'format' => 'raw',
         		'value' => Html::img('/' . $model->pic, ['style' => 'width:300px'])
-    		],
-            [
-            	'label' => '是否使用',
-            	'value' => $model->used ? '使用' : '不使用'
-    		]
+        	],
+            'position',
+            'mobile',
+            'email:email',
+            'summary',
+           
         ],
     ]) ?>
 

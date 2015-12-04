@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Frontpage */
+/* @var $model app\models\Member */
 
-$this->title = '创建首页模板';
-$this->params['breadcrumbs'][] = ['label' => 'Frontpages', 'url' => ['index']];
+$this->title = '创建成员';
+$this->params['breadcrumbs'][] = ['label' => 'Members', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="frontpage-create">
+<div class="member-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

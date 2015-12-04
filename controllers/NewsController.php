@@ -3,20 +3,18 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Frontpage;
-use app\models\UploadForm;
-use yii\data\ActiveDataProvider;
+use app\models\News;
+use app\models\NewsSearch;
 use yii\web\Controller;
-use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * FrontpageController implements the CRUD actions for Frontpage model.
+ * NewsController implements the CRUD actions for News model.
  */
-class FrontpageController extends Controller
+class NewsController extends Controller
 {
-    public $layout = 'main2';
+	public $layout = 'main2';
 	
 	public function behaviors()
     {
@@ -31,22 +29,22 @@ class FrontpageController extends Controller
     }
 
     /**
-     * Lists all Frontpage models.
+     * Lists all News models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Frontpage::find(),
-        ]);
+        $searchModel = new NewsSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
 
     /**
-     * Displays a single Frontpage model.
+     * Displays a single News model.
      * @param integer $id
      * @return mixed
      */
@@ -58,33 +56,25 @@ class FrontpageController extends Controller
     }
 
     /**
-     * Creates a new Frontpage model.
+     * Creates a new News model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Frontpage();
-        $form = new UploadForm();
-        
-		if ($model->load(Yii::$app->request->post())) {
-			if ($form->image = UploadedFile::getInstance($form, 'image')) {
-				$model->pic = 'image/' . $form->image->baseName . '.' . $form->image->extension;
-				$form->image->saveAs($model->pic);
-				$model->save();
-	        	return $this->redirect(['view', 'id' => $model->id]);
-			} else {
-				$form->addError('image', '图片不可为空');
-			}
-		}
-		return $this->render('create', [
-				'model' => $model,
-				'uploadForm' => $form
-		]);
+        $model = new News();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
     }
 
     /**
-     * Updates an existing Frontpage model.
+     * Updates an existing News model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -92,24 +82,18 @@ class FrontpageController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $form = new UploadForm();
-        if ($model->load(Yii::$app->request->post())) {
-        	if ($form->image = UploadedFile::getInstance($form, 'image')) {
-        		$model->pic = 'image/' . $form->image->baseName . '.' . $form->image->extension;
-        		$form->image->saveAs($model->pic);
-        	}
-        	$model->save();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
-            	'uploadForm' => $form
             ]);
         }
     }
 
     /**
-     * Deletes an existing Frontpage model.
+     * Deletes an existing News model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -122,15 +106,15 @@ class FrontpageController extends Controller
     }
 
     /**
-     * Finds the Frontpage model based on its primary key value.
+     * Finds the News model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Frontpage the loaded model
+     * @return News the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Frontpage::findOne($id)) !== null) {
+        if (($model = News::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

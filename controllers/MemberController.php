@@ -3,20 +3,20 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Frontpage;
+use app\models\Member;
 use app\models\UploadForm;
-use yii\data\ActiveDataProvider;
+use app\models\MemberSearch;
 use yii\web\Controller;
 use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * FrontpageController implements the CRUD actions for Frontpage model.
+ * MemberController implements the CRUD actions for Member model.
  */
-class FrontpageController extends Controller
+class MemberController extends Controller
 {
-    public $layout = 'main2';
+	public $layout = 'main2';
 	
 	public function behaviors()
     {
@@ -31,22 +31,22 @@ class FrontpageController extends Controller
     }
 
     /**
-     * Lists all Frontpage models.
+     * Lists all Member models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Frontpage::find(),
-        ]);
+        $searchModel = new MemberSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
 
     /**
-     * Displays a single Frontpage model.
+     * Displays a single Member model.
      * @param integer $id
      * @return mixed
      */
@@ -58,13 +58,13 @@ class FrontpageController extends Controller
     }
 
     /**
-     * Creates a new Frontpage model.
+     * Creates a new Member model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Frontpage();
+        $model = new Member();
         $form = new UploadForm();
         
 		if ($model->load(Yii::$app->request->post())) {
@@ -84,7 +84,7 @@ class FrontpageController extends Controller
     }
 
     /**
-     * Updates an existing Frontpage model.
+     * Updates an existing Member model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -99,17 +99,17 @@ class FrontpageController extends Controller
         		$form->image->saveAs($model->pic);
         	}
         	$model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+        	return $this->redirect(['view', 'id' => $model->id]);
         } else {
-            return $this->render('update', [
-                'model' => $model,
-            	'uploadForm' => $form
-            ]);
+        	return $this->render('update', [
+        			'model' => $model,
+        			'uploadForm' => $form
+        	]);
         }
     }
 
     /**
-     * Deletes an existing Frontpage model.
+     * Deletes an existing Member model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -122,15 +122,15 @@ class FrontpageController extends Controller
     }
 
     /**
-     * Finds the Frontpage model based on its primary key value.
+     * Finds the Member model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Frontpage the loaded model
+     * @return Member the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Frontpage::findOne($id)) !== null) {
+        if (($model = Member::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

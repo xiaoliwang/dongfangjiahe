@@ -4,19 +4,18 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Frontpage */
+/* @var $model app\models\News */
 
-$this->title = '创建首页模板';
-$this->params['breadcrumbs'][] = ['label' => 'Frontpages', 'url' => ['index']];
+$this->title = 'Create News';
+$this->params['breadcrumbs'][] = ['label' => 'News', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="frontpage-create">
+<div class="news-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
         'model' => $model,
-    	'uploadForm' => $uploadForm
     ]) ?>
 
 </div>

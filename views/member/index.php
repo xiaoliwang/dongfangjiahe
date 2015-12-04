@@ -4,48 +4,37 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
+/* @var $searchModel app\models\MemberSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = '首页模板';
+$this->title = '成员管理';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="frontpage-index">
+<div class="member-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('创建首页元素', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('创建成员', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
+
             'id',
-            'title',
-        	[
-        		'attribute' => 'link',
-        		'format' => 'raw',
-        		'label' => '链接',
-        		'value' => function($model){
-        			return Html::a($model->link, $model->link);
-        		}
-        	],
         	[
         		'attribute' => 'pic',
         		'format' => 'raw',
-        		'label' => '首页banner图',
+        		'label' => '照片',
         		'value' => function($model){
         			return Html::img('/' . $model->pic, ['style' => 'width:100px']);
         		}
-    		],
-        	[
-        		'attribute' => 'used',
-        		'label'=>'是否使用',
-        		'value' => function($model){
-    				return $model->used ? '使用' : '不使用';
-    			}
-    		],
+        	],
+            'name',
+            'position',
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
