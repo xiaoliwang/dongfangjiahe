@@ -15,11 +15,20 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= Html::csrfMetaTags() ?>
+<meta charset="<?= Yii::$app->charset ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <?= Html::csrfMetaTags()?>
     <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
+    <?php $this->head()?>
+    <script src="/js/jquery.min.js"></script>
+	<script src="/js/swiper.min.js"></script>
+	<script src="/js/swiper.animate.min.js"></script>
+	<script src="/js/zepto.min.js"></script>
+	<script src="/assets/5585a052/jquery.js"></script>
+	<script src="/assets/259a2aa4/yii.js"></script>
+	<script src="/assets/c3a8a96/js/bootstrap.js"></script>
+	<script src="/assets/5c70f64d/toolbar.js"></script>
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -34,38 +43,28 @@ AppAsset::register($this);
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav navbar-Left'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ?
-                ['label' => 'Login', 'url' => ['/site/login']] :
-                [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                    'url' => ['/site/logout'],
-                    'linkOptions' => ['data-method' => 'post']
-                ],
+            ['label' => '主页', 'url' => ['/site/index']],
+            ['label' => '关于我们', 'url' => ['/site/about']],
+			['label' => '公司团队', 'url' => ['/site/people']],
+			['label' => '合作伙伴', 'url' => ['/site/partner']],
+			['label' => '案例分析', 'url' => ['/site/case']],
+			['label' => '新闻动态', 'url' => ['/site/news']],
+            ['label' => '联系我们', 'url' => ['/site/contact']],
         ],
     ]);
     NavBar::end();
     ?>
-
-    <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= $content ?>
-    </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
+	<footer class="footer">
+		<div class="container">备案信息</div>
+	</footer>
 
 <?php $this->endBody() ?>
 </body>
