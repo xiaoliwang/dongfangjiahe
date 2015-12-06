@@ -131,7 +131,10 @@ class FrontpageController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        if (file_exists($model->pic))
+        	unlink($model->pic);
+        $model->delete();
 
         return $this->redirect(['index']);
     }
