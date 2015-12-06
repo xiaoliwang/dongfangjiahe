@@ -33,15 +33,15 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => '首页后台', 'url' => ['/frontpage/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => '成员管理', 'url' => ['/member/index']],
-        	['label' => '新闻管理', 'url' => ['/news/index']],
+            ['label' => '首页后台', 'url' => ['/frontpage']],
+            ['label' => '成员管理', 'url' => ['/member']],
+        	['label' => '新闻管理', 'url' => ['/news']],
+        	['label' => '合作伙伴', 'url' => ['/partner']],
             Yii::$app->user->isGuest ?
-                ['label' => 'Login', 'url' => ['/site/login']] :
+                ['label' => '登录', 'url' => ['/backend/login']] :
                 [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                    'url' => ['/site/logout'],
+                    'label' => '登出 (' . Yii::$app->user->identity->username . ')',
+                    'url' => ['/backend/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ],
         ],

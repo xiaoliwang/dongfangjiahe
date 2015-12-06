@@ -10,6 +10,7 @@ use yii\web\Controller;
 use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * FrontpageController implements the CRUD actions for Frontpage model.
@@ -27,6 +28,19 @@ class FrontpageController extends Controller
                     'delete' => ['post'],
                 ],
             ],
+        	'access' => [
+        		'class' => AccessControl::className(),
+        		'denyCallback' => function ($rule, $action) {
+        			return Yii::$app->getResponse()->redirect('/backend/login');
+        		},
+        		'rules' => [
+        			[
+        				'allow' => true,
+        				'actions' => ['index', 'view', 'create', 'update', 'delete'],
+        				'roles' => ['@'],
+        			],
+       			]
+ 			]
         ];
     }
 
@@ -93,6 +107,7 @@ class FrontpageController extends Controller
     {
         $model = $this->findModel($id);
         $form = new UploadForm();
+        
         if ($model->load(Yii::$app->request->post())) {
         	if ($form->image = UploadedFile::getInstance($form, 'image')) {
         		$model->pic = 'image/' . $form->image->baseName . '.' . $form->image->extension;

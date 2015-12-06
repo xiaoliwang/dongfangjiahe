@@ -10,6 +10,7 @@ use yii\web\Controller;
 use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * MemberController implements the CRUD actions for Member model.
@@ -27,6 +28,19 @@ class MemberController extends Controller
                     'delete' => ['post'],
                 ],
             ],
+        	'access' => [
+        		'class' => AccessControl::className(),
+        		'denyCallback' => function ($rule, $action) {
+        			return Yii::$app->getResponse()->redirect('/backend/login');
+        		},
+        		'rules' => [
+        			[
+        				'allow' => true,
+        				'actions' => ['index', 'view', 'create', 'update', 'delete'],
+        				'roles' => ['@'],
+        			],
+       			]
+ 			]
         ];
     }
 

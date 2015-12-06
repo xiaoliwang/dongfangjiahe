@@ -3,21 +3,23 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\News;
-use app\models\NewsSearch;
+use app\models\Partner;
+use app\models\UploadForm;
+use app\models\PartnerSearch;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
 /**
- * NewsController implements the CRUD actions for News model.
+ * PartnerController implements the CRUD actions for Partner model.
  */
-class NewsController extends Controller
+class PartnerController extends Controller
 {
 	public $layout = 'main2';
 	
-	public function behaviors()
+    public function behaviors()
     {
         return [
             'verbs' => [
@@ -37,18 +39,18 @@ class NewsController extends Controller
         				'actions' => ['index', 'view', 'create', 'update', 'delete'],
         				'roles' => ['@'],
         			],
-				]
+        		]
         	]
         ];
     }
 
     /**
-     * Lists all News models.
+     * Lists all Partner models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new NewsSearch();
+        $searchModel = new PartnerSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -58,7 +60,7 @@ class NewsController extends Controller
     }
 
     /**
-     * Displays a single News model.
+     * Displays a single Partner model.
      * @param integer $id
      * @return mixed
      */
@@ -70,29 +72,33 @@ class NewsController extends Controller
     }
 
     /**
-     * Creates a new News model.
+     * Creates a new Partner model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new News();
+        $model = new Partner();
+        $form = new UploadForm();
 
         if ($model->load(Yii::$app->request->post())) {
-        	$model->date = $_SERVER['REQUEST_TIME'];
-        	if (!$model->from)
-        		$model->from = '正晖资本';
-        	if ($model->save()) {
-        		return $this->redirect(['view', 'id' => $model->id]);
-        	}
-        }
-        return $this->render('create', [
-            'model' => $model,
-        ]);
+			if ($form->image = UploadedFile::getInstance($form, 'image')) {
+				$model->pic = 'image/' . $form->image->baseName . '.' . $form->image->extension;
+				$form->image->saveAs($model->pic);
+				$model->save();
+	        	return $this->redirect(['view', 'id' => $model->id]);
+			} else {
+				$form->addError('image', '图片不可为空');
+			}
+		}
+		return $this->render('create', [
+				'model' => $model,
+				'uploadForm' => $form
+		]);
     }
 
     /**
-     * Updates an existing News model.
+     * Updates an existing Partner model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -100,18 +106,25 @@ class NewsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $form = new UploadForm();
+        
+    	if ($model->load(Yii::$app->request->post())) {
+        	if ($form->image = UploadedFile::getInstance($form, 'image')) {
+        		$model->pic = 'image/' . $form->image->baseName . '.' . $form->image->extension;
+        		$form->image->saveAs($model->pic);
+        	}
+        	$model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+            	'uploadForm' => $form
             ]);
         }
     }
 
     /**
-     * Deletes an existing News model.
+     * Deletes an existing Partner model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -124,15 +137,15 @@ class NewsController extends Controller
     }
 
     /**
-     * Finds the News model based on its primary key value.
+     * Finds the Partner model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return News the loaded model
+     * @return Partner the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = News::findOne($id)) !== null) {
+        if (($model = Partner::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
