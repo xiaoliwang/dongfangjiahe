@@ -83,7 +83,7 @@ class FrontpageController extends Controller
         
 		if ($model->load(Yii::$app->request->post())) {
 			if ($form->image = UploadedFile::getInstance($form, 'image')) {
-				$model->pic = 'image/' . $form->image->baseName . '.' . $form->image->extension;
+				$model->pic = 'image/' . md5($_SERVER['REQUEST_TIME']. $form->image->baseName) . $_SERVER['REQUEST_TIME'] . '.' . $form->image->extension;
 				$form->image->saveAs($model->pic);
 				$model->save();
 	        	return $this->redirect(['view', 'id' => $model->id]);
@@ -110,7 +110,7 @@ class FrontpageController extends Controller
         
         if ($model->load(Yii::$app->request->post())) {
         	if ($form->image = UploadedFile::getInstance($form, 'image')) {
-        		$model->pic = 'image/' . $form->image->baseName . '.' . $form->image->extension;
+        		$model->pic = 'image/' . md5($_SERVER['REQUEST_TIME']. $form->image->baseName) . $_SERVER['REQUEST_TIME'] . '.' . $form->image->extension;
         		$form->image->saveAs($model->pic);
         	}
         	$model->save();
