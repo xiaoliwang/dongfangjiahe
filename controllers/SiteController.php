@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Frontpage;
+use app\models\Member;
 
 class SiteController extends Controller
 {
@@ -100,6 +101,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    
     public function actionNews()
     {
     	Yii::$app->view->registerCssFile('/css/animate.min.css');
@@ -110,6 +112,7 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
     	return $this->render('news');
     }
+    
     public function actionCase() {
     	Yii::$app->view->registerCssFile('/css/animate.min.css');
     	Yii::$app->view->registerCssFile('/css/swiper.min.css');
@@ -119,9 +122,14 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
     	return $this->render('case');
     }
+    
     public function actionPeople() {
-    	return $this->render('people');
+    	$people = Member::find()->all();
+    	return $this->render('people', [
+    		'people' => $people
+    	]);
     }
+    
     public function actionAbout()
     {
         return $this->render('about');
