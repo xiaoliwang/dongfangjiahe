@@ -1,6 +1,5 @@
-
 <div style="position: absolute;left:0px;right:0px;top:50px;bottom:50px;">
-<div class="swiper-container swiper-container-horizontal">
+	<div class="swiper-container swiper-container-horizontal">
 	<div class="swiper-wrapper"
 		style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
 		<?php foreach ($frontpages as $frontpage):?>
@@ -12,14 +11,6 @@
 		</div>
 		<?php endforeach;?>
 	</div>
-	<!-- Add Pagination -->
-	<div class="swiper-pagination swiper-pagination-clickable">
-		<span class="swiper-pagination-bullet"></span><span
-			class="swiper-pagination-bullet"></span><span
-			class="swiper-pagination-bullet"></span><span
-			class="swiper-pagination-bullet"></span>
-	</div>
-</div>
 </div>
 <script>
     var swiper = new Swiper('.swiper-container', {
