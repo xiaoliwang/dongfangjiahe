@@ -11,6 +11,8 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\News;
 
+use app\models\Frontpage;
+use app\models\Member;
 
 class SiteController extends Controller
 {
@@ -58,7 +60,10 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
-        return $this->render('index');
+    	$frontpages = Frontpage::find()->where(['used' => 1])->all();
+        return $this->render('index', [
+        	'frontpages' => $frontpages
+        ]);
     }
     
     public function actionPartner() {
@@ -99,6 +104,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    
     public function actionNews()
     {
     	Yii::$app->view->registerCssFile('/css/animate.min.css');
@@ -132,6 +138,7 @@ class SiteController extends Controller
     			'article' => $article
     	]);
     }
+    
     public function actionCase() {
     	Yii::$app->view->registerCssFile('/css/animate.min.css');
     	Yii::$app->view->registerCssFile('/css/swiper.min.css');
@@ -156,9 +163,14 @@ class SiteController extends Controller
     	]);
     	
     }
+    
     public function actionPeople() {
-    	return $this->render('people');
+    	$people = Member::find()->all();
+    	return $this->render('people', [
+    		'people' => $people
+    	]);
     }
+    
     public function actionAbout()
     {
         return $this->render('about');

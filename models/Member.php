@@ -33,7 +33,8 @@ class Member extends \yii\db\ActiveRecord
         return [
             [['name', 'mobile'], 'string', 'max' => 20],
             [['position', 'email'], 'string', 'max' => 100],
-            [['summary', 'pic'], 'string', 'max' => 255],
+            ['pic', 'string', 'max' => 255],
+        	['summary', 'string', 'max' => 500],
         	['email', 'email']
         ];
     }
