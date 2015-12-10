@@ -13,6 +13,7 @@ use app\models\News;
 
 use app\models\Frontpage;
 use app\models\Member;
+use app\models\Partner;
 
 class SiteController extends Controller
 {
@@ -67,7 +68,10 @@ class SiteController extends Controller
     }
     
     public function actionPartner() {
-    	return $this->render('partner');
+    	$partener = Partner::find()->all();
+    	return $this->render('partner',array(
+    		'parteners'=>$partener
+    	));
     }
 
     public function actionLogin()
