@@ -5,7 +5,7 @@
 	<div class="news">
 <?php foreach ($news as $new):?>
 <a href="/site/article?id=<?php echo $new->id;?>">
-	<div class="news_item" style="padding:20px 10px 0;height:70px;border-bottom:1px solid #666;">
+	<div class="news_item" style="padding:20px 10px 0;height:70px;border-bottom:1px solid #ddd;">
 		<div style="color:#a94442;font-size:20px;line-height:30px;width:100%;position:relative;font-weight:600;"><?php echo $new->title;?></div>
 		<div style="height:20px;width:100%;position:relative;">
 			<div style="color: #999;font-size:12px;line-height:20px;position:relative;float:left;">类别：<?php echo $new->type==1?"公司动态":$new->type==2?"行业资讯":"基金公告";?></div>
@@ -16,9 +16,3 @@
 <?php endforeach;?>
 </div>
 </div>
-<style>
-body {
-    height: 100%;
-	background-color:#000;
-}
-</style>

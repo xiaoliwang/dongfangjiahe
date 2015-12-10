@@ -14,9 +14,3 @@
 	<?php echo $article[0]->content;?>
 	</div>
 </div>
-<style>
-body {
-    height: 100%;
-	background-color:#000;
-}
-</style>
