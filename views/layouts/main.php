@@ -25,10 +25,6 @@ AppAsset::register($this);
 	<script src="/js/swiper.min.js"></script>
 	<script src="/js/swiper.animate.min.js"></script>
 	<script src="/js/zepto.min.js"></script>
-	<script src="/assets/5585a052/jquery.js"></script>
-	<script src="/assets/259a2aa4/yii.js"></script>
-	<script src="/assets/c3a8a96/js/bootstrap.js"></script>
-	<script src="/assets/5c70f64d/toolbar.js"></script>
 </head>
 <body>
 <?php $this->beginBody() ?>
