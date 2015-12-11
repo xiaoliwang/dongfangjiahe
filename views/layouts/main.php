@@ -32,7 +32,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => '<img style="width:40px;height:40px;margin-top:-10px;" src="/image/logo.png"/>',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -45,7 +45,7 @@ AppAsset::register($this);
             ['label' => '关于我们', 'url' => ['/site/about']],
 			['label' => '公司团队', 'url' => ['/site/people']],
 			['label' => '合作伙伴', 'url' => ['/site/partner']],
-			['label' => '案例分析', 'url' => ['/site/case']],
+			['label' => '已投项目', 'url' => ['/site/case']],
 			['label' => '新闻动态', 'url' => ['/site/news']],
             ['label' => '联系我们', 'url' => ['/site/contact']],
         ],

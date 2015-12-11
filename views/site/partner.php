@@ -1,4 +1,4 @@
-<div class="pageheader" style="background-image: url(/image/watchmaker-pic-2.jpg);">
+<div class="pageheader" style="background-image: url(/image/headerimg/7.jpg);">
 </div>
 <div class="page-contanier" style="margin-top: 100px;">
 	<div class="col">
