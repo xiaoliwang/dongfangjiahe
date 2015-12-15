@@ -4,12 +4,16 @@ namespace app\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
+use yii\data\Pagination;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\News;
+
 use app\models\Frontpage;
 use app\models\Member;
+use app\models\Partner;
 
 class SiteController extends Controller
 {
@@ -64,7 +68,10 @@ class SiteController extends Controller
     }
     
     public function actionPartner() {
-    	return $this->render('partner');
+    	$partener = Partner::find()->all();
+    	return $this->render('partner',array(
+    		'parteners'=>$partener
+    	));
     }
 
     public function actionLogin()
@@ -110,7 +117,30 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
-    	return $this->render('news');
+    	
+    	$query = News::find();
+    	
+    	$pagination = new Pagination([
+    			'defaultPageSize' => 10,
+    			'totalCount' => $query->count(),
+    	]);
+    	
+    	$news = $query->where(['in', 'type', [1, 2, 3]])->orderBy('date DESC')
+    		->offset($pagination->offset)
+    		->limit($pagination->limit)
+    		->all();
+    	return $this->render('news', [
+    			'news' => $news,
+    			'pagination' => $pagination,
+    			]);
+    }
+    
+    public function actionArticle($id) {
+    	$query = News::find();
+    	$article = $query->where(['=','id',$id])->all();
+    	return $this->render('article',[
+    			'article' => $article
+    	]);
     }
     
     public function actionCase() {
@@ -120,7 +150,22 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
-    	return $this->render('case');
+    	$query = News::find();
+    	 
+    	$pagination = new Pagination([
+    			'defaultPageSize' => 10,
+    			'totalCount' => $query->count(),
+    			]);
+    	 
+    	$news = $query->where('type=4')->orderBy('date DESC')
+    	->offset($pagination->offset)
+    	->limit($pagination->limit)
+    	->all();
+    	return $this->render('case', [
+    			'news' => $news,
+    			'pagination' => $pagination,
+    	]);
+    	
     }
     
     public function actionPeople() {
