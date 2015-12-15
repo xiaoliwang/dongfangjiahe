@@ -10,7 +10,6 @@
 		<div class="partener">
 		<a href="<?php echo $par->link;?>">
 		<div class="pic"><img src="/<?php echo $par->pic;?>" /></div>
-			
 			<div class="title">
 			<?php echo $par->title;?>
 			</div>
