@@ -1,5 +1,5 @@
 <div class="pageheader"
-	style="background-image: url(/headerimg/6.jpg);"></div>
+	style="background-image: url(/headerimg/IMG_0552.JPG);"></div>
 <div class="page-contanier">
 	<div class="about-1">
 		<p style="font-size: 40px; font-weight: 100;">小而美</p>
