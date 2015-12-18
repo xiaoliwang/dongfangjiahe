@@ -111,7 +111,7 @@ class NewsController extends Controller
         		$model->pic = 'image/' . md5($_SERVER['REQUEST_TIME']. $form->image->baseName) . $_SERVER['REQUEST_TIME'] . '.' . $form->image->extension;
         		$form->image->saveAs($model->pic);
         	}
-        	if ($model->type !== 4){
+        	if ($model->type != 4){
         		$model->pic = '';
         	}
         	$model->save();
