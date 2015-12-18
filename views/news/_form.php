@@ -10,12 +10,23 @@ use yii\widgets\ActiveForm;
 
 <div class="news-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'auth')->textInput(['maxlength' => true]) ?>
 
+	<div id="dispaly" style="display:<?= ($model->type===4) ? true : 'none'; ?>">
+	<?= $form->field($uploadForm, 'image', 
+    		['labelOptions' => ['label' => '公司logo']])->fileInput() ?>
+    
+	<?php
+    	if ($model->pic){
+    		echo Html::img('/' . $model->pic, ['style' => 'width:300px']);
+    	};
+    ?>
+	</div>
+	
     <?= $form->field($model, 'from')->textInput(['maxlength' => true, 'placeholder' => '正晖资本']) ?>
 
     <?= $form->field($model, 'content')->widget(\yii\redactor\widgets\Redactor::className(),[
@@ -42,3 +53,15 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+<script type="text/javascript">
+window.onload = function(){
+	$("#news-type").change(function(){
+		if (this.value == 4){
+			$('#dispaly').show();
+		} else {
+			$('#dispaly').hide();
+		}
+	});
+}
+	
+</script>

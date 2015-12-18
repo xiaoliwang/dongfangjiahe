@@ -14,6 +14,7 @@ use Yii;
  * @property integer $date
  * @property string $content
  * @property integer $type
+ * @property string $pic
  */
 class News extends \yii\db\ActiveRecord
 {
@@ -35,7 +36,8 @@ class News extends \yii\db\ActiveRecord
             [['content'], 'string'],
             [['title', 'auth'], 'string', 'max' => 50],
             [['from'], 'string', 'max' => 100],
-        	[['title', 'auth', 'content'], 'required']
+        	[['title', 'auth', 'content'], 'required'],
+        	[['pic'], 'string', 'max' => 255]
         ];
     }
 
@@ -52,6 +54,7 @@ class News extends \yii\db\ActiveRecord
             'date' => '发布日期',
             'content' => '正文',
             'type' => '分类',
+        	'pic' => '图标'
         ];
     }
     

@@ -1,3 +1,6 @@
+<?php 
+use yii\widgets\LinkPager;
+?>
 <div class="pageheader"
 	style="background-image: url(/headerimg/8.jpg);"></div>
 <div class="box"
@@ -12,5 +15,8 @@
 			</div>
 		</a>
 <?php endforeach;?>
+<?= LinkPager::widget([
+        'pagination' => $pagination,
+]);?>
 </div>
 </div>
