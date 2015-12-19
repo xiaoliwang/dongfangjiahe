@@ -226,7 +226,7 @@ body, html, input, textarea {
     position: absolute;
     width: 100%;
 }
-.news_item {
+.case .news_item {
     height: 60px;
     margin: 10px 10px;
     box-shadow: 0 0 2px #666;
@@ -234,22 +234,22 @@ body, html, input, textarea {
     width: 380px;
     float: left;
 }
-.news-col {
+.case .news-col {
     height: 80px;
 }
 
-.news_item .img {
+.case .news_item .img {
     overflow: hidden;
     width: 60px;
     height: 60px;
     border-right: 1px solid #eee;
     float: left;
 }
-.news_item .img>img {
+.case .news_item .img>img {
     height: 60px;
 }
 
-.news_item .title {
+.case .news_item .title {
     height: 60px;
     line-height: 60px;
     float: left;
