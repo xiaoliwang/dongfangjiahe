@@ -19,7 +19,7 @@
     var swiper = new Swiper('.swiper-container', {
     	effect : 'fade',
     	loop : true,
-    	speed:1000,
+    	speed:5000,
     	fade: {
   		  crossFade: true,
   		},
@@ -30,7 +30,7 @@
   		  onSlideChangeEnd: function(swiper){ 
   		    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
   		  },
-    	autoplay : 8000,
+    	autoplay : 5000,
         pagination: '.swiper-pagination',
         paginationClickable: true
     });
