@@ -3,10 +3,8 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\News;
-use app\models\NewsSearch;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
+use app\models\{News, NewsSearch, UploadForm};
+use yii\web\{Controller, UploadedFile, NotFoundHttpException};
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
@@ -77,9 +75,14 @@ class NewsController extends Controller
     public function actionCreate()
     {
         $model = new News();
+        $form = new UploadForm();
 
         if ($model->load(Yii::$app->request->post())) {
         	$model->date = $_SERVER['REQUEST_TIME'];
+        	if ($form->image = UploadedFile::getInstance($form, 'image')) {
+        		$model->pic = 'image/' . md5($_SERVER['REQUEST_TIME']. $form->image->baseName) . $_SERVER['REQUEST_TIME'] . '.' . $form->image->extension;
+        		$form->image->saveAs($model->pic);
+        	}
         	if (!$model->from)
         		$model->from = '正晖资本';
         	if ($model->save()) {
@@ -88,6 +91,7 @@ class NewsController extends Controller
         }
         return $this->render('create', [
             'model' => $model,
+        	'uploadForm' => $form
         ]);
     }
 
@@ -100,12 +104,22 @@ class NewsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $form = new UploadForm();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+        	if ($form->image = UploadedFile::getInstance($form, 'image')) {
+        		$model->pic = 'image/' . md5($_SERVER['REQUEST_TIME']. $form->image->baseName) . $_SERVER['REQUEST_TIME'] . '.' . $form->image->extension;
+        		$form->image->saveAs($model->pic);
+        	}
+        	if ($model->type != 4){
+        		$model->pic = '';
+        	}
+        	$model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+            	'uploadForm' => $form
             ]);
         }
     }

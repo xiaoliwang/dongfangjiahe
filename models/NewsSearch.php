@@ -74,7 +74,6 @@ class NewsSearch extends News
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'auth', $this->auth])
             ->andFilterWhere(['like', 'from', $this->from])
-            //->andFilterWhere(['between', 'date', $this->start_date, $this->end_date])
             ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;

@@ -34,6 +34,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'auth',
             'from',
         	[
+        		'label' => '公司logo',
+        		'format' => 'raw',
+        		'value' => $model->pic ? 
+        			Html::img('/' . $model->pic, ['style' => 'width:300px']) :
+        			null
+        	],
+        	[
         		'format' => 'raw',
         		'label' => '发布日期',
         		'value' => date('Y-m-d H:i:s', $model->date)

@@ -118,14 +118,18 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
     	
-    	$query = News::find();
+    	$type = Yii::$app->request->get('type', 1);
+    	if(!in_array($type, [1, 2, 3]))
+    		$type = 1;
+    	
+    	$query = News::find()->where("type = $type");
     	
     	$pagination = new Pagination([
     			'defaultPageSize' => 10,
     			'totalCount' => $query->count(),
     	]);
     	
-    	$news = $query->where(['in', 'type', [1, 2, 3]])->orderBy('date DESC')
+    	$news = $query->orderBy('date DESC')
     		->offset($pagination->offset)
     		->limit($pagination->limit)
     		->all();
@@ -150,14 +154,14 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
-    	$query = News::find();
-    	 
+    	$query = News::find()->where('type=4');
+    	
     	$pagination = new Pagination([
     			'defaultPageSize' => 10,
     			'totalCount' => $query->count(),
     			]);
     	 
-    	$news = $query->where('type=4')->orderBy('date DESC')
+    	$news = $query->orderBy('date DESC')
     	->offset($pagination->offset)
     	->limit($pagination->limit)
     	->all();
@@ -178,5 +182,28 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    
+    public function actionSearch()
+    {
+    	$s = Yii::$app->request->get('s');
+    	
+    	$query = News::find()
+    		->andFilterWhere(['like', 'title', $s]);
+    	
+    	$pagination = new Pagination([
+    			'defaultPageSize' => 10,
+    			'totalCount' => $query->count(),
+    	]);
+    	
+    	$news = $query->orderBy('date DESC')
+    	->offset($pagination->offset)
+    	->limit($pagination->limit)
+    	->all();
+    	
+    	return $this->render('news', [
+    			'news' => $news,
+    			'pagination' => $pagination,
+    			]);
     }
 }

@@ -1,5 +1,5 @@
 <div class="pageheader"
-	style="background-image: url(/headerimg/IMG_0552.JPG);"></div>
+	style="background-image: url(/headerimg/10.jpg);"></div>
 <div class="page-contanier">
 	<div class="about-1">
 		<p style="font-size: 40px; font-weight: 100;">小而美</p>
@@ -43,7 +43,7 @@
 	</div>
 	
 	<div class="about-4"
-		style="position: relative; width: 800px; margin: auto; height: 520px;border-bottom: 1px solid #ccc;">
+		style="position: relative; width: 800px; margin: auto; height: 540px;border-bottom: 1px solid #ccc;">
 		<p
 			style="font-size: 30px; font-weight: 100; text-align: center; margin-top: 40px;">业务领域</p>
 		<p
@@ -51,20 +51,20 @@
 		<p
 			style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">财务顾问</p>
 		<p
-				style="font-size: 14px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">帮助企业设计全方面的咨询服务，包括企业经营咨询、企业财务梳理、企业战略咨询、资本市场运营以及企业投融资服务。
+				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">帮助企业设计全方面的咨询服务，包括企业经营咨询、企业财务梳理、企业战略咨询、资本市场运营以及企业投融资服务。
 				</p>
 		<p
 			style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">财务顾问</p>
 		<p
-				style="font-size: 14px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">帮助企业完成“新三板”的挂牌上市，组建会计师事务所、律师事务所及券商的上市团队。缩短企业“新三板”上市的流程，节省“新三板”上市时间。帮助七夜完成后续的融资服务，提供相应定增资金；努力谋求被投企业的并购重组机会，并培训企业达到“转板”要求。</p>
+				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">帮助企业完成“新三板”的挂牌上市，组建会计师事务所、律师事务所及券商的上市团队。缩短企业“新三板”上市的流程，节省“新三板”上市时间。帮助七夜完成后续的融资服务，提供相应定增资金；努力谋求被投企业的并购重组机会，并培训企业达到“转板”要求。</p>
 		<p
 			style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">地产投资</p>
 		<p
-				style="font-size: 14px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">参与股东优质地产项目，投资国内一二线商业住宅项目。</p>
+				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">参与股东优质地产项目，投资国内一二线商业住宅项目。</p>
 	
 	</div>
 	<div class="about-5"
-		style="position: relative; width: 800px; margin: auto; height: 700px;">
+		style="position: relative; width: 800px; margin: auto; height: 720px;">
 		<p
 			style="font-size: 30px; font-weight: 100; text-align: center; margin-top: 40px;">投资策略</p>
 		<div style="width: 600px;   margin: 0px 30px 0px 100px;position:relative;height:234px;">
@@ -75,17 +75,17 @@
 		<p
 			style="width: 140px;margin: 40px 330px 0;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">创新优势</p>
 		<p
-				style="font-size: 14px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本在投资理念、投资模式和管理机制上，实现发现价值、改造价值、实业释放、金融释放、杠杆释放的全方位创新</p>
+				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本在投资理念、投资模式和管理机制上，实现发现价值、改造价值、实业释放、金融释放、杠杆释放的全方位创新</p>
 		<p
 			style="width: 140px;margin: 40px 330px 0;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">资源优势
 </p>
 	<p
-				style="font-size: 14px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本辅导的企业已经有近10家在新三板时长成功上市，拟上市企业近20余家。同时依托股东资源优势，为主板上市公司提供财务顾问服务，进一步实现全方位立体式产业布局</p>
+				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本辅导的企业已经有近10家在新三板时长成功上市，拟上市企业近20余家。同时依托股东资源优势，为主板上市公司提供财务顾问服务，进一步实现全方位立体式产业布局</p>
 		<p
 			style="width: 140px;margin: 40px 330px 0;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">人才优势
 </p>
 	<p
-				style="font-size: 14px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本拥有强大的政策、项目、财富、和管理优势。同时外聘了包括法律、财务、审计多领域专家作为顾问。组成了正晖基金强大的顾问团队。进一步提升了正晖资本人才资源优势</p>
+				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本拥有强大的政策、项目、财富、和管理优势。同时外聘了包括法律、财务、审计多领域专家作为顾问。组成了正晖基金强大的顾问团队。进一步提升了正晖资本人才资源优势</p>
 	
 	</div>
 </div>
