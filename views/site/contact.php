@@ -1,5 +1,5 @@
 <div class="pageheader"
-	style="background-image: url(/headerimg/1.jpg);"></div>
+	style="background-image: url(/headerimg/2.png);"></div>
 <div class="page-contanier">
 	<img alt="" style="width: 100%; margin: 100px 0 0;"
 		src="/image/map-1.png" />
@@ -11,7 +11,7 @@
 					<h2 style="font-size: 14px; font-weight: 700;">地址
 	</h2>
 	<p style="font-size: 12px;">
-		北京市 朝阳区<br>霄云路6号<br>C1A 4B4
+		北京市 朝阳区<br>霄云路26号<br>鹏润大厦A1907室
 	</p>
 </div>
 </div>
@@ -21,15 +21,11 @@
 		<div class="sqs-block-content">
 			<h2 style="font-size: 14px; font-weight: 700;">Email</h2>
 			<p>
-				<a href="mailto:XXX@XXXX.com">XXX@XXXX.com</a>
+				<a href="mailto:XXX@XXXX.com">2117654316@qq.com</a>
 			</p>
 			<h2 style="font-size: 14px; font-weight: 700;">电话</h2>
 			<p>
-				123456789
-			</p>
-			<h2 style="font-size: 14px; font-weight: 700;">微信</h2>
-			<p>
-				123456789
+				010-51087734
 			</p>
 		</div>
 	</div>

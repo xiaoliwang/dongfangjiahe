@@ -2,7 +2,7 @@
 use yii\widgets\LinkPager;
 ?>
 <div class="pageheader"
-	style="background-image: url(/headerimg/12.jpg);"></div>
+	style="background-image: url(/headerimg/17.jpg);"></div>
 <div class="box"
 	style="width: 800px; bottom: 60px; top: 300px; left: 0; right: 0; margin: auto;">
 	<div class="case">
