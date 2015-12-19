@@ -7,10 +7,10 @@ use yii\widgets\LinkPager;
 			echo '18.jpg';
 			break;
 		case 3:
-			echo '17.jpg';
+			echo '14.jpg';
 			break;
 		default:
-			echo '4.jpg';
+			echo '16.jpg';
 	}?>);"></div>
 <div class="box"
 	style="width: 800px;  bottom: 60px; top: 300px; left: 0; right: 0; margin: auto;">
