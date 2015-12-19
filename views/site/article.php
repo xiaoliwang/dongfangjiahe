@@ -1,5 +1,5 @@
 <div class="pageheader"
-	style="background-image: url(/headerimg/222.jpg);"></div>
+	style="background-image: url(/headerimg/19.jpg);"></div>
 <div class="box article"
 	style="width: 800px;  bottom: 60px; top: 300px; left: 0; right: 0; margin: 100px auto;">
 	<div class="title">
