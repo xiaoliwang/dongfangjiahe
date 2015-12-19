@@ -1,5 +1,5 @@
 <div class="pageheader"
-	style="background-image: url(/headerimg/222.jpg);">
+	style="background-image: url(/headerimg/11.jpg);">
 </div>
 <div class="page-contanier" style=" margin-top: 80px;width:800px">
 	<?php foreach ($people as $key => $member):?>

@@ -2,7 +2,16 @@
 use yii\widgets\LinkPager;
 ?>
 <div class="pageheader"
-	style="background-image: url(/headerimg/222.jpg);"></div>
+	style="background-image: url(/headerimg/<?php switch(Yii::$app->request->get('type', 1)){
+		case 2:
+			echo '18.jpg';
+			break;
+		case 3:
+			echo '14.jpg';
+			break;
+		default:
+			echo '16.jpg';
+	}?>);"></div>
 <div class="box"
 	style="width: 800px;  bottom: 60px; top: 300px; left: 0; right: 0; margin: auto;">
 	<div class="news">

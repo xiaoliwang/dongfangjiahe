@@ -46,17 +46,17 @@ AppAsset::register($this);
 			['label' => '公司团队', 'url' => ['/site/people']],
 			['label' => '合作伙伴', 'url' => ['/site/partner']],
 			['label' => '案例分析', 'url' => ['/site/case']],
-			['label' => '新闻动态', 'items' => [
+			['label' => '新闻动态', 'url'=> ['/site/news'], 'items' => [
 				['label' => '公司动态', 'url' => '/site/news?type=1'],
 				['label' => '行业资讯', 'url' => '/site/news?type=2'],
-				['label' => '基金公告', 'url' => '/site/news?type=3']
-					
+				['label' => '基金公告', 'url' => '/site/news?type=3'],
     		]],
             ['label' => '联系我们', 'url' => ['/site/contact']],
         ],
     ]);
     echo Html::beginForm(['site/search'], 'get', ['class' => 'navbar-form navbar-right']);
-    echo Html::textInput('s', '',['class' => 'form-control', 'placeholder' => 'Search']);
+    echo Html::textInput('s', '',['class' => 'form-control', 'placeholder' => '搜索']);
+    echo '<span class="submit" style="margin-left:-30px;"><img src="/headerimg/search.png" style="width:20px;height:20px;"><button id="submit-btn" type="submit" style="display:none;"></span>';
     echo Html::endForm();
     
     NavBar::end();
@@ -70,7 +70,11 @@ AppAsset::register($this);
 	<footer class="footer">
 		<div class="container">备案信息</div>
 	</footer>
-
+<script type="text/javascript">
+        $('span.submit').click(function(){
+        	$('#submit-btn').click();
+        });
+</script>
 <?php $this->endBody() ?>
 </body>
 </html>
