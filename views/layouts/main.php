@@ -46,11 +46,10 @@ AppAsset::register($this);
 			['label' => '公司团队', 'url' => ['/site/people']],
 			['label' => '合作伙伴', 'url' => ['/site/partner']],
 			['label' => '案例分析', 'url' => ['/site/case']],
-			['label' => '新闻动态', 'items' => [
+			['label' => '新闻动态', 'url'=> ['/site/news'], 'items' => [
 				['label' => '公司动态', 'url' => '/site/news?type=1'],
 				['label' => '行业资讯', 'url' => '/site/news?type=2'],
-				['label' => '基金公告', 'url' => '/site/news?type=3']
-					
+				['label' => '基金公告', 'url' => '/site/news?type=3'],
     		]],
             ['label' => '联系我们', 'url' => ['/site/contact']],
         ],
