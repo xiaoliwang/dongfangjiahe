@@ -21,8 +21,10 @@
 		<div class="sqs-block-content">
 			<h2 style="font-size: 14px; font-weight: 700;">Email</h2>
 			<p>
-				<a href="2117654316@qq.com">2117654316@qq.com</a><br/>
-				<a href="zxd@GemsrayCapital.com">zxd@GemsrayCapital.com</a>
+				<a href="mailto:2117654316@qq.com">2117654316@qq.com</a>
+			</p>
+			<p>
+				<a href="mailto:zxd@GemsrayCapital.com">zxd@GemsrayCapital.com</a>
 			</p>
 			<h2 style="font-size: 14px; font-weight: 700;">电话</h2>
 			<p>
