@@ -68,7 +68,7 @@ AppAsset::register($this);
 </div>
 
 	<footer class="footer">
-		<div class="container">备案信息</div>
+		<div class="container">京ICP备15064520号-1</div>
 	</footer>
 <script type="text/javascript">
         $('span.submit').click(function(){
