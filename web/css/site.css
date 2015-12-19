@@ -258,3 +258,13 @@ body, html, input, textarea {
     color: #000;
     width: 300px;
 }
+
+input.form-control{
+	    height: 30px;
+	border-radius:15px;
+}
+
+input.form-control:focus{
+	       border-color: #830722;
+}
+
