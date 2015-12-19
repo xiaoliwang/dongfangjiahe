@@ -226,6 +226,9 @@ body, html, input, textarea {
     position: absolute;
     width: 100%;
 }
+.case {
+	margin-top:30px;
+}
 .case .news_item {
     height: 60px;
     margin: 10px 10px;
