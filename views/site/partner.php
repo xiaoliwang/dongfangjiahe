@@ -4,7 +4,7 @@
 	<div class="col">
 	<?php $i=0;?>
 	<?php foreach ($parteners as $par):?>
-		<?php if($i%5==0 && $i!=0):?>
+		<?php if($i%6==0 && $i!=0):?>
 		</div><div class="col">
 		<?php endif;$i++;?>
 		<div class="partener">
