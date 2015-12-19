@@ -56,7 +56,8 @@ AppAsset::register($this);
         ],
     ]);
     echo Html::beginForm(['site/search'], 'get', ['class' => 'navbar-form navbar-right']);
-    echo Html::textInput('s', '',['class' => 'form-control', 'placeholder' => 'Search']);
+    echo Html::textInput('s', '',['class' => 'form-control', 'placeholder' => '搜索']);
+    echo '<span class="submit" style="margin-left:-30px;"><img src="/headerimg/search.png" style="width:20px;height:20px;"><button id="submit-btn" type="submit" style="display:none;"></span>';
     echo Html::endForm();
     
     NavBar::end();
@@ -70,7 +71,11 @@ AppAsset::register($this);
 	<footer class="footer">
 		<div class="container">备案信息</div>
 	</footer>
-
+<script type="text/javascript">
+        $('span.submit').click(function(){
+        	$('#submit-btn').click();
+        });
+</script>
 <?php $this->endBody() ?>
 </body>
 </html>
