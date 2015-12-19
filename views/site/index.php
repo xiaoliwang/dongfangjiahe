@@ -1,4 +1,4 @@
-<div style="position: absolute;left:0px;right:0px;top:50px;bottom:50px;">
+<div style="position: absolute;left:0px;right:0px;top: 0px;bottom: 0px;">
 	<div class="swiper-container swiper-container-horizontal">
 		<div class="swiper-wrapper"
 			style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
@@ -12,7 +12,7 @@
 			<?php endforeach;?>
 		</div>
 	</div>
-	<div class="swiper-pagination" style="position: absolute;bottom:0px;left:0px;right:0px;margin:auto">
+	<div class="swiper-pagination" style="position: absolute;bottom:50px;left:0px;right:0px;margin:auto">
 	</div>
 </div>
 <script>
@@ -30,6 +30,7 @@
   		  onSlideChangeEnd: function(swiper){ 
   		    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
   		  },
+
     	autoplay : 6000,
         pagination: '.swiper-pagination',
         paginationClickable: true
