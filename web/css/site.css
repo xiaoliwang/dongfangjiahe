@@ -174,9 +174,13 @@ body, html, input, textarea {
     color: #a94442;
     font-weight: 600;
 }
-
-.article .time {
-    text-align: right;
+.article .info {
+    height: 30px;
+    overflow: hidden;
+}
+.article .time, .article .from, .article .auth {
+    float: right;
+    margin-left: 35px;
     color: #666;
 }
 
