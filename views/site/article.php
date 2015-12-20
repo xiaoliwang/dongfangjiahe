@@ -2,15 +2,15 @@
 	style="background-image: url(/headerimg/<?php
 		switch($article[0]->type){
 			case 2:
-				echo '18';break;
+				echo '18.jpg)';break;
 			case 3:
-				echo '14';break;
+				echo '14.jpg)';break;
 			case 4:
-				echo '17';break;
+				echo '17.jpg);background-position-y: 360px';break;
 			default:
-				echo '16';
+				echo '27.jpg);background-position-y:-4px';
 		}
-	?>.jpg);"></div>
+	?>"></div>
 <div class="box article"
 	style="width: 800px;  bottom: 60px; top: 300px; left: 0; right: 0; margin: 100px auto;">
 	<div class="title">
