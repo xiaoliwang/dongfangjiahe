@@ -141,7 +141,7 @@ class SiteController extends Controller
     
     public function actionArticle($id) {
     	$query = News::find();
-    	$article = $query->where(['=','id',$id])->all();
+    	$article = $query->where(['=','id',$id])->one();
     	return $this->render('article',[
     			'article' => $article
     	]);
