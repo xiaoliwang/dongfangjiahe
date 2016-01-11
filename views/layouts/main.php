@@ -17,10 +17,16 @@ AppAsset::register($this);
 <head>
 <meta charset="<?= Yii::$app->charset ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+<meta name="baidu-site-verification" content="qAGa9lvDQs" />
+<meta name="robots" content="index,fllow">
+<meta name="author" content="Tom Jiepeng Cao">
+<meta name="copyright" content="MIT">
+<meta name="description" content="北京正晖基金管理有限公司秉承 “小而美” 的企业理念，追求精益求精的价值发现、价值实现和价值释放。">
+<meta name="keywords" content="正晖,正晖基金,正晖资本,北京正晖资本,北京正晖基金管理有限公司,基金,金融,投资管理,PE,民营">   
     <?= Html::csrfMetaTags()?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head()?>
+    <link type="image/x-icon" href="/image/logo.png" rel="shortcut icon">
     <script src="/js/jquery.min.js"></script>
 	<script src="/js/swiper.min.js"></script>
 	<script src="/js/swiper.animate.min.js"></script>

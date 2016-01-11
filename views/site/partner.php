@@ -8,10 +8,10 @@
 		</div><div class="col">
 		<?php endif;$i++;?>
 		<div class="partener">
-		<a href="<?php echo $par->link;?>">
-		<div class="pic"><img src="/<?php echo $par->pic;?>" /></div>
+		<a href="<?=$par->link;?>">
+		<div class="pic"><img alt="<?=$par->title;?>" src="/<?=$par->pic;?>" /></div>
 			<div class="title">
-			<?php echo $par->title;?>
+			<?=$par->title;?>
 			</div>
 		</div>
 		</a>

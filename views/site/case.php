@@ -14,9 +14,9 @@ use yii\widgets\LinkPager;
 <a href="/site/article?id=<?php echo $new->id;?>">
 			<div class="news_item">
 				<div class="img">
-					<img alt="" src="/<?php echo $new->pic;?>">
+					<img alt="<?=$new->title;?>" src="/<?=$new->pic;?>">
 				</div>
-				<div class="title"><?php echo $new->title;?></div>
+				<div class="title"><?=$new->title;?></div>
 			</div>
 		</a>
 <?php endforeach;?>
