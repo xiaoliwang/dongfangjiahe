@@ -1,4 +1,4 @@
-<div class="pageheader" style="background-image: url(/headerimg/15.jpg);">
+<div class="pageheader" style="background-image: url(/headerimg/26.jpg);background-position-y: 385px;">
 </div>
 <div class="page-contanier" style="margin-top: 100px;">
 	<div class="col">
@@ -8,10 +8,10 @@
 		</div><div class="col">
 		<?php endif;$i++;?>
 		<div class="partener">
-		<a href="<?php echo $par->link;?>">
-		<div class="pic"><img src="/<?php echo $par->pic;?>" /></div>
+		<a href="<?=$par->link;?>">
+		<div class="pic"><img alt="<?=$par->title;?>" src="/<?=$par->pic;?>" /></div>
 			<div class="title">
-			<?php echo $par->title;?>
+			<?=$par->title;?>
 			</div>
 		</div>
 		</a>

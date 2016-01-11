@@ -1,5 +1,5 @@
 <div class="pageheader"
-	style="background-image: url(/headerimg/2.png);"></div>
+	style="background-image: url(/headerimg/1.jpg);"></div>
 <div class="page-contanier">
 	<img alt="" style="width: 100%; margin: 100px 0 0;"
 		src="/image/map-1.png" />

@@ -17,7 +17,7 @@ use app\models\Partner;
 
 class SiteController extends Controller
 {
-    public function behaviors()
+	public function behaviors()
     {
         return [
             'access' => [
@@ -61,6 +61,7 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
+    	$this->getView()->title = '正晖资本';
     	$frontpages = Frontpage::find()->where(['used' => 1])->all();
         return $this->render('index', [
         	'frontpages' => $frontpages
@@ -68,6 +69,7 @@ class SiteController extends Controller
     }
     
     public function actionPartner() {
+    	$this->getView()->title = '合作伙伴';
     	$partener = Partner::find()->all();
     	return $this->render('partner',array(
     		'parteners'=>$partener
@@ -76,7 +78,8 @@ class SiteController extends Controller
 
     public function actionLogin()
     {
-        if (!\Yii::$app->user->isGuest) {
+    	$this->getView()->title = '';
+    	if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
 
@@ -98,7 +101,8 @@ class SiteController extends Controller
 
     public function actionContact()
     {
-        $model = new ContactForm();
+    	$this->getView()->title = '联系我们';
+    	$model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
@@ -117,6 +121,7 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
+    	$this->getView()->title = '新闻动态';
     	
     	$type = Yii::$app->request->get('type', 1);
     	if(!in_array($type, [1, 2, 3]))
@@ -141,7 +146,7 @@ class SiteController extends Controller
     
     public function actionArticle($id) {
     	$query = News::find();
-    	$article = $query->where(['=','id',$id])->all();
+    	$article = $query->where(['=','id',$id])->one();
     	return $this->render('article',[
     			'article' => $article
     	]);
@@ -154,6 +159,7 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
+    	$this->getView()->title = '案例分析';
     	$query = News::find()->where('type=4');
     	
     	$pagination = new Pagination([
@@ -173,6 +179,7 @@ class SiteController extends Controller
     }
     
     public function actionPeople() {
+    	$this->getView()->title = '公司团队';
     	$people = Member::find()->all();
     	return $this->render('people', [
     		'people' => $people
@@ -181,13 +188,14 @@ class SiteController extends Controller
     
     public function actionAbout()
     {
-        return $this->render('about');
+    	$this->getView()->title = '关于我们';
+    	return $this->render('about');
     }
     
     public function actionSearch()
     {
     	$s = Yii::$app->request->get('s');
-    	
+    	$this->getView()->title = "搜索-$s";
     	$query = News::find()
     		->andFilterWhere(['like', 'title', $s]);
     	
@@ -202,8 +210,8 @@ class SiteController extends Controller
     	->all();
     	
     	return $this->render('news', [
-    			'news' => $news,
-    			'pagination' => $pagination,
-    			]);
+    		'news' => $news,
+    		'pagination' => $pagination
+    	]);
     }
 }
