@@ -68,7 +68,7 @@ class News extends \yii\db\ActiveRecord
     			return '基金公告';
     			break;
     		case 4:
-    			return '案例分析';
+    			return '投资案例';
     			break;
     		default:
     			return '公司动态';

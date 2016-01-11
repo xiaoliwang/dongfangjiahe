@@ -33,7 +33,7 @@ use yii\widgets\LinkPager;
 					echo '基金公告';
 					break;
 				default:
-					echo '案例分析';
+					echo '投资案例';
 			}
 			?></div>
 			<div style="color: #999;font-size:12px;line-height:20px;position:relative;float:left;margin-left:40px;">时间：<?php echo date("Y/m/d",$new->date);?></div>

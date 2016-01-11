@@ -45,7 +45,7 @@ AppAsset::register($this);
             ['label' => '关于我们', 'url' => ['/site/about']],
 			['label' => '公司团队', 'url' => ['/site/people']],
 			['label' => '合作伙伴', 'url' => ['/site/partner']],
-			['label' => '案例分析', 'url' => ['/site/case']],
+			['label' => '投资案例', 'url' => ['/site/case']],
 			['label' => '新闻动态', 'url'=> ['/site/news'], 'items' => [
 				['label' => '公司动态', 'url' => '/site/news?type=1'],
 				['label' => '行业资讯', 'url' => '/site/news?type=2'],
