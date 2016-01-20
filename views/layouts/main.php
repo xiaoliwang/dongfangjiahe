@@ -48,7 +48,12 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-Left'],
         'items' => [
             ['label' => '主页', 'url' => ['/site/index']],
-            ['label' => '关于我们', 'url' => ['/site/about']],
+            ['label' => '关于我们', 'url' => ['/site/about'],'items' => [
+['label' => '公司介绍', 'url' => '/site/about?type=0'],
+['label' => '股东介绍', 'url' => '/site/about?type=1'],
+['label' => '业务领域', 'url' => '/site/about?type=2'],
+['label' => '投资策略', 'url' => '/site/about?type=3'],
+]],
 			['label' => '公司团队', 'url' => ['/site/people']],
 			['label' => '合作伙伴', 'url' => ['/site/partner']],
 			['label' => '投资案例', 'url' => ['/site/case']],
