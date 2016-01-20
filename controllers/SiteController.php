@@ -186,12 +186,36 @@ class SiteController extends Controller
     	]);
     }
     
-    public function actionAbout()
+    public function actionAbout($type=0)
     {
     	$this->getView()->title = '关于我们';
-    	return $this->render('about');
+    	if(intval($type)==0) {
+    		return $this->render('info');
+    	}
+    	if(intval($type)==1) {
+    		return $this->render('invest');
+    	}
+    	if(intval($type)==2) {
+    		return $this->render('area');
+    	}
+    	if(intval($type)==3) {
+    		return $this->render('strategy');
+    	}
+    	return $this->render('info');
     }
-    
+    public function actionPolicy($type=0) {
+    	if(intval($type)==0) {
+    		$this->getView()->title = '隐私政策';
+    		
+    		return $this->render('policy1');
+    	}
+    	if(intval($type)==1) {
+    		$this->getView()->title = '使用条款';
+    		
+    		return $this->render('policy2');
+    	}
+    	return $this->render('policy1');
+    }
     public function actionSearch()
     {
     	$s = Yii::$app->request->get('s');
