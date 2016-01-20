@@ -203,6 +203,7 @@ class SiteController extends Controller
     	}
     	return $this->render('info');
     }
+    
     public function actionPolicy($type=0) {
     	if(intval($type)==0) {
     		$this->getView()->title = '隐私政策';
@@ -216,6 +217,7 @@ class SiteController extends Controller
     	}
     	return $this->render('policy1');
     }
+    
     public function actionSearch()
     {
     	$s = Yii::$app->request->get('s');

@@ -188,6 +188,11 @@ body, html, input, textarea {
     margin: 40px 0 100px;
     color: #000;
 }
+.article .content li {
+    line-height: 30px;
+    font-size: 16px;
+}
+
 
 .col {
     height: 200px;

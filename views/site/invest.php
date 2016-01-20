@@ -33,7 +33,7 @@
 				<p
 					style="font-size: 20px; font-weight: 300; text-align: center; margin-top: 40px; width: 260px;">四川大东</p>
 				<p
-					style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin-top: 10px; width: 260px; height: 174px;">四川大东集团经理20多年的发展，才去全资、控股、参股、关联等方式对下属企业进行管理，集团业务广泛覆盖房地产开发、城市建设，精细化工及新能源、环保等产业并逐步向创投资本、股权投资转型升级。凭借得天独厚的人才、科技和资源优势，四川打动集团已成为集人才、资金、管理模式和经营理念于一体大型民营企业。</p>
+					style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin-top: 10px; width: 260px; height: 174px;">四川大东集团经历20多年的发展，才去全资、控股、参股、关联等方式对下属企业进行管理，集团业务广泛覆盖房地产开发、城市建设，精细化工及新能源、环保等产业并逐步向创投资本、股权投资转型升级。凭借得天独厚的人才、科技和资源优势，四川打动集团已成为集人才、资金、管理模式和经营理念于一体大型民营企业。</p>
 			</div>
 		</div>
 	</div>
