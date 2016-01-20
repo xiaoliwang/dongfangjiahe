@@ -74,7 +74,10 @@ AppAsset::register($this);
 </div>
 
 	<footer class="footer">
-		<div class="container">京ICP备15064520号-1</div>
+		<div class="container">
+			<p style="float:left;position:relative;line-height:25px;font-size:12px;" >隐私政策&nbsp;使用条款</p>
+			<p style="margin:auto;position:absolute;line-height:25px;font-size:12px;left:0;right:0;" >京ICP备15064520号-1</p>
+		</div>
 	</footer>
 <script type="text/javascript">
         $('span.submit').click(function(){
