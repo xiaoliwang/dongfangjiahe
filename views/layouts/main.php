@@ -48,7 +48,12 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-Left'],
         'items' => [
             ['label' => '主页', 'url' => ['/site/index']],
-            ['label' => '关于我们', 'url' => ['/site/about']],
+            ['label' => '关于我们', 'url' => ['/site/about'],'items' => [
+['label' => '公司介绍', 'url' => '/site/about?type=0'],
+['label' => '股东介绍', 'url' => '/site/about?type=1'],
+['label' => '业务领域', 'url' => '/site/about?type=2'],
+['label' => '投资策略', 'url' => '/site/about?type=3'],
+]],
 			['label' => '公司团队', 'url' => ['/site/people']],
 			['label' => '投资案例', 'url' => ['/site/case']],
 			['label' => '新闻动态', 'url'=> ['/site/news'], 'items' => [
@@ -74,7 +79,10 @@ AppAsset::register($this);
 </div>
 
 	<footer class="footer">
-		<div class="container">京ICP备15064520号-1</div>
+		<div class="container">
+			<p style="float:left;position:relative;line-height:25px;font-size:12px;" >隐私政策&nbsp;使用条款</p>
+			<p style="margin:auto;position:absolute;line-height:25px;font-size:12px;left:0;right:0;" >京ICP备15064520号-1</p>
+		</div>
 	</footer>
 <script type="text/javascript">
         $('span.submit').click(function(){
