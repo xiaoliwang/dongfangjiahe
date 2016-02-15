@@ -16,6 +16,13 @@
 	<div class="title">
 		<?php echo $article->title;?>
 	</div>
+	<?php if($article->type == 4):?>
+	<ul id="tab" style="height: 30px;padding: 0px;">
+		<li id="intro-tab" class="active">详情</li>
+		<li id="diagram-tab">图表</li>
+	</ul>
+	<div id="intro-content" class="active">
+	<?php endif;?>
 	<?php if($article->type != 4):?>
 	<div class="info">
 	<div class="time">
@@ -32,9 +39,24 @@
 	<div class="content">
 	<?php echo $article->content;?>
 	</div>
+	<?php ?>
+	</div>
+	<div id="diagram-content">
 	<div id="diagram" style="width:800px;height:400px;"></div>
 	<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
     <script type="text/javascript">
+    	$('#tab li#intro-tab').click(function(){
+    		$('#tab li').removeClass('active');
+    		$('#diagram-content').removeClass('active');
+    		$('#intro-content').addClass('active');
+    		$(this).addClass('active');
+        });
+    	$('#tab li#diagram-tab').click(function(){
+    		$('#tab li').removeClass('active');
+    		$('#diagram-content').addClass('active');
+    		$('#intro-content').removeClass('active');
+    		$(this).addClass('active');
+        });
         // 路径配置
         require.config({
             paths: {
@@ -112,4 +134,6 @@
             }
         );
     </script>
+	</div>
+	<?php ?>
 </div>
