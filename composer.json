@@ -18,7 +18,8 @@
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "yiidoc/yii2-redactor": "*"
+        "yiidoc/yii2-redactor": "*",
+        "philippfrenzel/yii2fullcalendar": "^2.5"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

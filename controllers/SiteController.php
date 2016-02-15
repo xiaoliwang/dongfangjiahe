@@ -180,7 +180,7 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
     	$this->getView()->title = '案例分析';
-    	$query = News::find()->where('type=4');
+    	$query = News::find()->where('type = 4');
     	
     	$pagination = new Pagination([
     			'defaultPageSize' => 10,
