@@ -196,13 +196,13 @@ body, html, input, textarea {
     line-height: 30px;
     font-size: 16px;
 }
-li#intro-tab.active,
-li#diagram-tab.active {
+.article li#intro-tab.active,
+.article li#diagram-tab.active {
 	background-color: #fff;
 	color:#cd3333;
 }
-li#intro-tab,
-li#diagram-tab{
+.article li#intro-tab,
+.article li#diagram-tab{
     width: 100px;
     background-color: #efefef;
     list-style: none;
@@ -212,12 +212,12 @@ li#diagram-tab{
 	border:1px solid #efefef;
 	border-bottom:0px;
 }
-#intro-content.active,
-#diagram-content.active{
+.article #intro-content.active,
+.article #diagram-content.active{
 	display:block;
 } 
-#intro-content,
-#diagram-content {
+.article #intro-content,
+.article #diagram-content {
     display: none;
 }
 .col {

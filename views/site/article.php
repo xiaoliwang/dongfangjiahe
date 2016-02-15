@@ -39,10 +39,10 @@
 	<div class="content">
 	<?php echo $article->content;?>
 	</div>
-	<?php ?>
+	<?php if($article->type == 4):?>
 	</div>
 	<div id="diagram-content">
-	<div id="diagram" style="width:800px;height:400px;"></div>
+	<div id="diagram" style="width:800px;height:400px;margin-top:40px;"></div>
 	<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
     <script type="text/javascript">
     	$('#tab li#intro-tab').click(function(){
@@ -135,5 +135,5 @@
         );
     </script>
 	</div>
-	<?php ?>
+	<?php endif;?>
 </div>
