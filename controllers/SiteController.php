@@ -83,8 +83,6 @@ class SiteController extends Controller
     	$frontpages = Frontpage::find()->where(['used' => 1])->all();
         return $this->render('index', [
         	'frontpages' => $frontpages,
-        	'people'=>$people,
-        	'news'=>$news
         ]);
     }
     
