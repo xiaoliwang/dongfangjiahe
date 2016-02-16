@@ -55,7 +55,10 @@ echo Nav::widget([
             ['label' => '投资策略', 'url' => '/site/about?type=3'],
         ]],
 		['label' => '公司团队', 'url' => ['/site/people']],
-		['label' => '投资案例', 'url' => ['/site/case']],
+		['label' => '已投项目', 'url' => ['/site/case'], 'items' => [
+			['label' => '2015', 'url' => '/site/case?year=2015'],
+			['label' => '2016', 'url' => '/site/case?year=2016'],
+    	]],
 		['label' => '新闻动态', 'url'=> ['/site/news'], 'items' => [
 			['label' => '公司动态', 'url' => '/site/news?type=1'],
 			['label' => '行业资讯', 'url' => '/site/news?type=2'],

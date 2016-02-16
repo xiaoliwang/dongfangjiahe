@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('创建基金指数', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('日历模式', ['calendar'], ['class' => 'btn btn-success']) ?>
+        <?php //Html::a('日历模式', ['calendar'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
         		'attribute' => 'create_time',
         		'label' => '创建时间',
         		'value' => function($model){
-        			return date('Y/m/d', $model->create_time);
+        			return date('Y-m', $model->create_time);
         		}
         	],
             ['class' => 'yii\grid\ActionColumn'],

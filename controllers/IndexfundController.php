@@ -34,7 +34,7 @@ class IndexfundController extends Controller
         		'rules' => [
         			[
         				'allow' => true,
-        				'actions' => ['index', 'view', 'create', 'update', 'delete', 'calendar'],
+        				'actions' => ['index', 'view', 'create', 'update', 'delete', 'calendar', 'test'],
         				'roles' => ['@'],
         			],
         		]

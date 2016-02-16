@@ -172,7 +172,7 @@ class SiteController extends Controller
     	]);
     }
     
-    public function actionCase() {
+    public function actionCase(int $year) {
     	Yii::$app->view->registerCssFile('/css/animate.min.css');
     	Yii::$app->view->registerCssFile('/css/swiper.min.css');
     	Yii::$app->view->registerJsFile('/js/jquery.min.js');
@@ -183,13 +183,17 @@ class SiteController extends Controller
     	$query = News::find()->where('type = 4');
     	
     	$pagination = new Pagination([
-    			'defaultPageSize' => 10,
-    			'totalCount' => $query->count(),
-    			]);
-    	 
+    		'defaultPageSize' => 10,
+    		'totalCount' => $query->count(),
+    	]);
+    	
+    	$start_unix = ($year - 1970) * 31536000;
+    	$end_unix = $start_unix + 31536000;
+    	
     	$news = $query->orderBy('date DESC')
     	->offset($pagination->offset)
     	->limit($pagination->limit)
+    	->andWhere(['between', 'date', $start_unix, $end_unix])
     	->all();
     	return $this->render('case', [
     			'news' => $news,

@@ -18,8 +18,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'index_fund')->textInput(['type' => 'number',
     	'step' => 0.001]) ?>
 
-    <?= $form->field($model, 'create_time')->textInput(['type' => 'date',
-    	'value' => date('Y-m-d', $model->create_time ?? time())]) ?>
+    <?= $form->field($model, 'create_time')->textInput(['type' => 'month',
+    	'value' => date('Y-m', $model->create_time ?? time())]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? '创建' : '更新', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

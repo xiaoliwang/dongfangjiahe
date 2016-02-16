@@ -28,7 +28,6 @@ EOF;
 			'lang' => 'zh-cn'
 	],
 	'ajaxEvents' => Url::to(['/indexfund/test']),
-	'header' => [],
 	'clientOptions' => [
 		'eventClick' => new JsExpression($JSEventClick),
 	]

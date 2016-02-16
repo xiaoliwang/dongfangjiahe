@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
         	[
         		'format' => 'raw',
         		'label' => '创建时间',
-        		'value' => date('Y/m/d', $model->create_time)
+        		'value' => date('Y-m', $model->create_time)
     		],
         ],
     ]) ?>
