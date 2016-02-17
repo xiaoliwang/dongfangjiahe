@@ -18,13 +18,13 @@
 </div>
 <div class="page-contanier" style="margin-top: 30px; width: 900px">
 	<div style="margin: 0; left: 0; top: 0; width: 600px;">
-		<a href="#">
+		<a href="/site/about?type=0">
 			<div class="news first">
 				<div class="img" style="width: 140px; height: 120px; float: left;">
-					<img alt="标题啊标题" src="" style="width: 112px; height: 112px; margin:4px 14px;">
+					<img alt="正晖资本:小而美" src="" style="width: 112px; height: 112px; margin:4px 14px;">
 				</div>
 				<div class="title"
-					style="width: 400px; margin-left: 10px; font-size: 12px; float: left; line-height: 15px; color: #000; ">标题啊标题</div>
+					style="width: 400px; margin-left: 10px; font-size: 12px; float: left; line-height: 15px; color: #000; ">正晖资本:小而美</div>
 				<div class="intro"
 					style="width: 400px; float: left; margin-left: 10px;font-size: 12px; height: 90px; overflow: hidden; color: #999;line-height: 22px;margin-top:10px;">标题啊标题标题啊标题标题啊标题标题啊标题标题啊
 					标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标啊标题标题啊标题标题啊标啊标题标题啊标题标题啊标
@@ -32,9 +32,9 @@
 			</div>
 		</a>
 		<div style="width: 600px;margin-top: 10px;float: left;">
-		<?php for($i=0;$i<4;$i++):?>
-		<a href="#" style="display: block;color: #999;width: 280px;margin-right: 20px;font-size: 12px; float: left; line-height: 24px;">标题啊标题<span style="float: right">2015-01-01</span></a>
-		<?php endfor;?>
+		<?php foreach ($news as $new) :?>
+		<a href="/site/article?id=<?= $new->id ?>" style="display: block;color: #999;width: 280px;margin-right: 20px;font-size: 12px; float: left; line-height: 24px;"><?= $new->title?><span style="float: right"><?= date('Y-m-d', $new->date)?></span></a>
+		<?php endforeach;?>
 		</div>
 	</div>
 	<div class="swiper-container2" style="margin: 0;width: 260px; position: absolute; right: 0; top: 0;background-color: white;height: 180px;overflow:hidden;">

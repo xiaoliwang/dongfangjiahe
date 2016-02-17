@@ -62,28 +62,15 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
-    	$this->getView()->title = '公司团队';
-    	$people = Member::find()->all();
     	$this->getView()->title = '正晖资本';
-    	
-    	$s = Yii::$app->request->get('s');
-    	$this->getView()->title = "搜索-$s";
-    	$query = News::find()
-    	->andFilterWhere(['like', 'title', $s]);
-    	 
-    	$pagination = new Pagination([
-    			'defaultPageSize' => 10,
-    			'totalCount' => $query->count(),
-    			]);
-    	 
-    	$news = $query->orderBy('date DESC')
-    	->offset($pagination->offset)
-    	->limit($pagination->limit)
-    	->all();
+
+    	$news = News::find()->select('id, title, date')->
+    	limit(5)->orderBy('id desc')->where('type in (1, 2, 3)')->all();
     	
     	$frontpages = Frontpage::find()->where(['used' => 1])->all();
         return $this->render('index', [
         	'frontpages' => $frontpages,
+        	'news' => $news
         ]);
     }
     

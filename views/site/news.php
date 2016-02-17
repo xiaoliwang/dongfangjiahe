@@ -24,7 +24,7 @@ use yii\widgets\LinkPager;
 			<?php 
 			switch($new->type){
 				case 1:
-					echo '公司动态';
+					echo '案例分析';
 					break;
 				case 2:
 					echo '行业资讯';
