@@ -41,28 +41,37 @@ NavBar::begin([
     'brandLabel' => Html::img('/image/logo.png', ['style' => 'width:40px;height:40px;margin-top:-10px']),
     'brandUrl' => Yii::$app->homeUrl,
     'options' => [
-        'class' => 'navbar-inverse navbar-fixed-top',
+        'class' => 'navbar-inverse navbar-fixed-top nav-transparent',
     ],
 ]);
+
 echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-Left'],
+	'activateParents' => true,
     'items' => [
         ['label' => '主页', 'url' => ['/site/index']],
-        ['label' => '关于我们', 'url' => ['/site/about'],'items' => [
-            ['label' => '公司介绍', 'url' => '/site/about?type=0'],
-            ['label' => '股东介绍', 'url' => '/site/about?type=1'],
-            ['label' => '业务领域', 'url' => '/site/about?type=2'],
-            ['label' => '投资策略', 'url' => '/site/about?type=3'],
+        ['label' => '关于我们', 'dropDownOptions' => ['class' => 'ul-transparent'],
+        	'activateParents' => true, 'items' => [
+            ['label' => '公司介绍', 'url' => ['/site/about', 'type' => 0]],
+        	['label' => '股东介绍', 'url' => ['/site/about', 'type' => 1]],
+        	['label' => '业务领域', 'url' => ['/site/about', 'type' => 2]],
+        	['label' => '投资策略', 'url' => ['/site/about', 'type' => 3]],
         ]],
-		['label' => '公司团队', 'url' => ['/site/people']],
-		['label' => '已投项目', 'url' => ['/site/case'], 'items' => [
-			['label' => '2015', 'url' => '/site/case?year=2015'],
-			['label' => '2016', 'url' => '/site/case?year=2016'],
+    	['label' => '投资团队', 'dropDownOptions' => ['class' => 'ul-transparent'],
+    		'activateParents' => true, 'items' => [
+    		['label' => '团队介绍', 'url' => ['/site/people']],
+    		['label' => '案例分析', 'url' => ['/site/news', 'type' => 1]]
+        ]],
+		['label' => '已投项目', 'dropDownOptions' => ['class' => 'ul-transparent'],
+			'activateParents' => true, 'items' => [
+			['label' => '2015', 'url' => ['/site/case', 'year' => 2015]],
+			['label' => '2016', 'url' => ['/site/case', 'year' => 2016]],
     	]],
-		['label' => '新闻动态', 'url'=> ['/site/news'], 'items' => [
-			['label' => '公司动态', 'url' => '/site/news?type=1'],
-			['label' => '行业资讯', 'url' => '/site/news?type=2'],
-			['label' => '基金公告', 'url' => '/site/news?type=3'],
+		['label' => '公司动态', 'dropDownOptions' => ['class' => 'ul-transparent'],
+		'activateParents' => true,
+		'items' => [
+			['label' => '行业资讯', 'url' => ['/site/news', 'type' => 2]],
+			['label' => '基金公告', 'url' => ['/site/news', 'type' => 3]],
         ]],
     	['label' => '合作伙伴', 'url' => ['/site/partner']],
         ['label' => '联系我们', 'url' => ['/site/contact']],

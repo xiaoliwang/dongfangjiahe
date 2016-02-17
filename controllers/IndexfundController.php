@@ -49,7 +49,7 @@ class IndexfundController extends Controller
     public function actionIndex()
     {
     	$dataProvider = new ActiveDataProvider([
-            'query' => IndexFund::find(),
+            'query' => IndexFund::find()->orderBy('create_time desc'),
         ]);
 
         return $this->render('index', [

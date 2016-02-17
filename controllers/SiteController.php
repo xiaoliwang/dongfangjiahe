@@ -14,6 +14,7 @@ use app\models\News;
 use app\models\Frontpage;
 use app\models\Member;
 use app\models\Partner;
+use app\models\IndexFund;
 
 class SiteController extends Controller
 {
@@ -163,10 +164,11 @@ class SiteController extends Controller
     }
     
     public function actionArticle($id) {
-    	$query = News::find();
-    	$article = $query->where(['=','id',$id])->one();
+    	$article = News::findOne($id);
+    	$indexfunds = IndexFund::find()->all();
     	return $this->render('article',[
-    			'article' => $article
+    			'article' => $article,
+    			'indexfunds' => $indexfunds
     	]);
     }
     
