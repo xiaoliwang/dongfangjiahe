@@ -64,13 +64,16 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
     	$this->getView()->title = '正晖资本';
 
-    	$news = News::find()->select('id, title, date')->
-    	limit(5)->orderBy('id desc')->where('type in (1, 2, 3)')->all();
+    	$news = News::find()->select('id, title, date')
+    		->limit(4)->orderBy('id desc')->where('type in (1, 2, 3)')->all();
+    	
+    	$cases = News::find()->select('pic')->limit(8)->where('type = 4')->all();
     	
     	$frontpages = Frontpage::find()->where(['used' => 1])->all();
         return $this->render('index', [
         	'frontpages' => $frontpages,
-        	'news' => $news
+        	'news' => $news,
+        	'cases' => $cases
         ]);
     }
     
