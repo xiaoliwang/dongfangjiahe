@@ -13,81 +13,57 @@
 			<?php endforeach;?>
 		</div>
 	</div>
-	<div class="swiper-pagination"
-		style="position: absolute; bottom: 0px; left: 0px; right: 0px; margin: auto">
+	<div class="swiper-pagination">
 	</div>
 </div>
-<div class="page-contanier" style="margin-top: 30px; width: 1000px">
+<div class="page-contanier" style="margin-top: 30px; width: 900px">
 	<div style="margin: 0; left: 0; top: 0; width: 600px;">
 		<a href="#">
 			<div class="news first">
-				<div class="img" style="width: 180px; height: 180px; float: left;">
-					<img alt="标题啊标题" src="" style="width: 180px; height: 180px;">
+				<div class="img" style="width: 140px; height: 120px; float: left;">
+					<img alt="标题啊标题" src="" style="width: 112px; height: 112px; margin:4px 14px;">
 				</div>
 				<div class="title"
-					style="width: 400px; margin-left: 20px; font-size: 20px; float: left; line-height: 40px; color: #000; margin-top: 20px;">标题啊标题</div>
+					style="width: 400px; margin-left: 10px; font-size: 12px; float: left; line-height: 15px; color: #000; ">标题啊标题</div>
 				<div class="intro"
-					style="width: 400px; float: left; margin-left: 20px; height: 120px; overflow: hidden; color: #999;">标题啊标题标题啊标题标题啊标题标题啊标题标题啊
-					标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标
-					题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标
-					题啊标题标题啊标题标</div>
+					style="width: 400px; float: left; margin-left: 10px;font-size: 12px; height: 90px; overflow: hidden; color: #999;line-height: 22px;margin-top:10px;">标题啊标题标题啊标题标题啊标题标题啊标题标题啊
+					标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标啊标题标题啊标题标题啊标啊标题标题啊标题标题啊标
+					</div>
 			</div>
 		</a>
-		<div style="width: 600px;margin-top: 20px;float: left;">
+		<div style="width: 600px;margin-top: 10px;float: left;">
 		<?php for($i=0;$i<4;$i++):?>
-		<a href="#" style="display: block;color: #333;width: 280px;margin-right: 20px;line-height: 30px;float:left;">标题啊标题</a>
+		<a href="#" style="display: block;color: #999;width: 280px;margin-right: 20px;font-size: 12px; float: left; line-height: 24px;">标题啊标题<span style="float: right">2015-01-01</span></a>
 		<?php endfor;?>
 		</div>
 	</div>
-	<div style="margin: 0; width: 400px; position: absolute; right: 0; top: 0; width: 360px;">
-	<a style="
-    display: block;
-    width: 360px;
-    height: 40px;
-    border-bottom: 1px solid #eee;
-    font-weight: 600;"><div style="
-    color: #777;
-    line-height: 40px;
-    float: left;
-    width: 200px;">神马神马</div><div style="
-    line-height: 40px;
-    float: right;
-    width: 60px;
-    color: #3c763d;">⇧38</div></a>
-    <a style="
-    display: block;
-    width: 360px;
-    height: 40px;
-    border-bottom: 1px solid #eee;
-    font-weight: 600;"><div style="
-    color: #777;
-    line-height: 40px;
-    float: left;
-    width: 200px;">神马神马神马神马</div><div style="
-    line-height: 40px;
-    float: right;
-    width: 60px;
-    color: #a94442;">⇩20</div></a>
+	<div class="swiper-container2" style="margin: 0;width: 260px; position: absolute; right: 0; top: 0;background-color: white;height: 180px;overflow:hidden;">
+	   
+		<div class="swiper-wrapper" style="">
+		<?php for($i=0;$i<4;$i++):?>
+		<div class="swiper-slide">
+		
+			<?php for($i=0;$i<4;$i++):?>
+				<a class="icon" style="margin-left: 30px;margin-bottom: 10px;float: left;display: block;width: 80px;height: 80px;">
+				<img alt="" style="width: 80px;height: 80px;" >
+				</a>
+			<?php endfor;?>
+		</div>
+		<?php endfor;?>
+		</div>
 	</div>
 </div>
 <script>
     var swiper = new Swiper('.swiper-container', {
-    	effect : 'fade',
     	loop : true,
-    	speed:5000,
-    	fade: {
-  		  crossFade: true,
-  		},
-  		onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
-  		    swiperAnimateCache(swiper); //隐藏动画元素 
-  		    swiperAnimate(swiper); //初始化完成开始动画
-  		  }, 
-  		  onSlideChangeEnd: function(swiper){ 
-  		    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-  		  },
-
-    	autoplay : 6000,
-        pagination: '.swiper-pagination',
-        paginationClickable: true
+    	speed:1000,
+    	autoplay : 3000,
+        pagination: '.swiper-pagination'
+    });
+    var swiper2 = new Swiper('.swiper-container2', {
+    	loop : true,
+    	speed:1000,
+    	autoplay : 2000,
+        mode : 'vertical'
     });
 </script>
