@@ -21,7 +21,7 @@
 		<a href="#">
 			<div class="news first">
 				<div class="img" style="width: 140px; height: 120px; float: left;">
-					<img alt="标题啊标题" src="" style="width: 112px; height: 112px; margin:4px 14px;">
+					<img alt="标题啊标题" src="http://pic.58pic.com/58pic/14/76/61/15A58PICaQW_1024.jpg" style="width: 112px; height: 112px; margin:4px 14px;">
 				</div>
 				<div class="title"
 					style="width: 400px; margin-left: 10px; font-size: 12px; float: left; line-height: 15px; color: #000; ">标题啊标题</div>
@@ -54,12 +54,22 @@
 	</div>
 </div>
 <script>
+/**
+	function changeSlide() {
+		if()
+		$('.swiper-container .swiper-slide.swiper-slide-active').next().addClass('swiper-slide-active');
+		$('.swiper-container .swiper-slide.swiper-slide-visible').next().addClass('swiper-slide-visible');
+		$('.swiper-container .swiper-slide.swiper-slide-visible').removeClass('swiper-slide-visible');
+		$('.swiper-container .swiper-slide.swiper-slide-active').removeClass('swiper-slide-active');
+		
+	}**/
     var swiper = new Swiper('.swiper-container', {
     	loop : true,
     	speed:1000,
     	autoplay : 3000,
         pagination: '.swiper-pagination'
     });
+   // setTimeout('changeSlide()', 3000);
     var swiper2 = new Swiper('.swiper-container2', {
     	loop : true,
     	speed:1000,
