@@ -18,13 +18,13 @@ use yii\widgets\LinkPager;
 <?php foreach ($news as $new):?>
 <a href="/site/article?id=<?php echo $new->id;?>">
 	<div class="news_item" style="padding:20px 10px 0;height:70px;border-bottom:1px solid #ddd;">
-		<div style="color:#a94442;font-size:20px;line-height:30px;width:100%;position:relative;font-weight:600;"><?php echo $new->title;?></div>
+		<div style="color:#333;font-size:20px;line-height:30px;width:100%;position:relative;font-weight:600;"><?php echo $new->title;?></div>
 		<div style="height:20px;width:100%;position:relative;">
 			<div style="color: #999;font-size:12px;line-height:20px;position:relative;float:left;">类别：
 			<?php 
 			switch($new->type){
 				case 1:
-					echo '公司动态';
+					echo '案例分析';
 					break;
 				case 2:
 					echo '行业资讯';

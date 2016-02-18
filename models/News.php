@@ -71,7 +71,7 @@ class News extends \yii\db\ActiveRecord
     			return '投资案例';
     			break;
     		default:
-    			return '公司动态';
+    			return '案例分析';
     	}
     }
 }

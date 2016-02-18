@@ -14,6 +14,7 @@ use app\models\News;
 use app\models\Frontpage;
 use app\models\Member;
 use app\models\Partner;
+use app\models\IndexFund;
 
 class SiteController extends Controller
 {
@@ -62,9 +63,17 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
     	$this->getView()->title = '正晖资本';
+
+    	$news = News::find()->select('id, title, date')
+    		->limit(4)->orderBy('id desc')->where('type in (1, 2, 3)')->all();
+    	
+    	$cases = News::find()->select('pic')->limit(8)->where('type = 4')->all();
+    	
     	$frontpages = Frontpage::find()->where(['used' => 1])->all();
         return $this->render('index', [
-        	'frontpages' => $frontpages
+        	'frontpages' => $frontpages,
+        	'news' => $news,
+        	'cases' => $cases
         ]);
     }
     
@@ -145,14 +154,15 @@ class SiteController extends Controller
     }
     
     public function actionArticle($id) {
-    	$query = News::find();
-    	$article = $query->where(['=','id',$id])->one();
+    	$article = News::findOne($id);
+    	$indexfunds = IndexFund::find()->all();
     	return $this->render('article',[
-    			'article' => $article
+    			'article' => $article,
+    			'indexfunds' => $indexfunds
     	]);
     }
     
-    public function actionCase() {
+    public function actionCase(int $year) {
     	Yii::$app->view->registerCssFile('/css/animate.min.css');
     	Yii::$app->view->registerCssFile('/css/swiper.min.css');
     	Yii::$app->view->registerJsFile('/js/jquery.min.js');
@@ -160,16 +170,20 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
     	$this->getView()->title = '案例分析';
-    	$query = News::find()->where('type=4');
+    	$query = News::find()->where('type = 4');
     	
     	$pagination = new Pagination([
-    			'defaultPageSize' => 10,
-    			'totalCount' => $query->count(),
-    			]);
-    	 
+    		'defaultPageSize' => 10,
+    		'totalCount' => $query->count(),
+    	]);
+    	
+    	$start_unix = ($year - 1970) * 31536000;
+    	$end_unix = $start_unix + 31536000;
+    	
     	$news = $query->orderBy('date DESC')
     	->offset($pagination->offset)
     	->limit($pagination->limit)
+    	->andWhere(['between', 'date', $start_unix, $end_unix])
     	->all();
     	return $this->render('case', [
     			'news' => $news,
