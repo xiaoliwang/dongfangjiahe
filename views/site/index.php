@@ -30,9 +30,9 @@
 				<div class="title"
 					style="width: 400px; margin-left: 10px; font-size: 12px; float: left; line-height: 15px; color: #000; ">正晖资本:小而美</div>
 				<div class="intro"
-					style="width: 400px; float: left; margin-left: 10px;font-size: 12px; height: 90px; overflow: hidden; color: #999;line-height: 22px;margin-top:10px;">标题啊标题标题啊标题标题啊标题标题啊标题标题啊
-					标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标题标题啊标啊标题标题啊标题标题啊标啊标题标题啊标题标题啊标
-					</div>
+					style="width: 400px; float: left; margin-left: 10px;font-size: 12px; height: 90px; overflow: hidden; color: #999;line-height: 22px;margin-top:10px;">
+					一段优美的文字，彰显小而美的价值
+				</div>
 			</div>
 		</a>
 		<div style="width: 600px;margin-top: 10px;float: left;">
@@ -47,11 +47,11 @@
 		<?php for($i=0;$i<4;$i++):?>
 		<div class="swiper-slide">
 		
-			<?php for($i=0;$i<4;$i++):?>
-				<a class="icon" style="margin-left: 30px;margin-bottom: 10px;float: left;display: block;width: 80px;height: 80px;">
-				<img alt="" style="width: 80px;height: 80px;" >
+			<?php foreach($cases as $case) :?>
+				<a href="/site/case?year=2015" class="icon" style="margin-left: 30px;margin-bottom: 10px;float: left;display: block;width: 80px;height: 80px;">
+					<img src="/<?=$case->pic?>" alt="" style="width: 80px;height: 80px;" >
 				</a>
-			<?php endfor;?>
+			<?php endforeach;?>
 		</div>
 		<?php endfor;?>
 		</div>
@@ -71,7 +71,8 @@
     	loop : true,
     	speed:1000,
     	autoplay : 3000,
-        pagination: '.swiper-pagination'
+        pagination: '.swiper-pagination',
+        paginationClickable: true
     });
    // setTimeout('changeSlide()', 3000);
     var swiper2 = new Swiper('.swiper-container2', {
