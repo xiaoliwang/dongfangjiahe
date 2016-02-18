@@ -155,10 +155,8 @@ class SiteController extends Controller
     
     public function actionArticle($id) {
     	$article = News::findOne($id);
-    	$indexfunds = IndexFund::find()->all();
     	return $this->render('article',[
     			'article' => $article,
-    			'indexfunds' => $indexfunds
     	]);
     }
     

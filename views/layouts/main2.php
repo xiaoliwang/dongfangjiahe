@@ -40,7 +40,7 @@ AppAsset::register($this);
             ['label' => '首页后台', 'url' => ['/frontpage']],
             ['label' => '成员管理', 'url' => ['/member']],
         	['label' => '新闻管理', 'url' => ['/news']],
-        	['label' => '基金指數', 'url' => ['/indexfund']],
+        	//['label' => '基金指數', 'url' => ['/indexfund']],
         	['label' => '合作伙伴', 'url' => ['/partner']],	
             Yii::$app->user->isGuest ?
                 ['label' => '登录', 'url' => ['/backend/login']] :

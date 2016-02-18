@@ -67,7 +67,8 @@
     	loop : true,
     	speed:1000,
     	autoplay : 3000,
-        pagination: '.swiper-pagination'
+        pagination: '.swiper-pagination',
+        paginationClickable: true
     });
    // setTimeout('changeSlide()', 3000);
     var swiper2 = new Swiper('.swiper-container2', {
