@@ -68,17 +68,17 @@
 		
 	}**/
     var swiper = new Swiper('.swiper-container', {
-    	loop : true,
-    	speed:1000,
-    	autoplay : 3000,
-        pagination: '.swiper-pagination',
-        paginationClickable: true
+    	'loop' : true,
+    	'speed':1000,
+    	'autoplay' : 3000,
+        'pagination': '.swiper-pagination',
+        'paginationClickable': true
     });
    // setTimeout('changeSlide()', 3000);
     var swiper2 = new Swiper('.swiper-container2', {
-    	loop : true,
-    	speed:1000,
-    	autoplay : 2000,
-        mode : 'vertical'
+    	'loop' : true,
+    	'speed':1000,
+    	'autoplay' : 2000,
+        'mode' : 'vertical'
     });
 </script>

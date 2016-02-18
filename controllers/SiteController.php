@@ -56,12 +56,12 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-    	Yii::$app->view->registerCssFile('/css/animate.min.css');
+    	//Yii::$app->view->registerCssFile('/css/animate.min.css');
     	Yii::$app->view->registerCssFile('/css/swiper.min.css');
-    	Yii::$app->view->registerJsFile('/js/jquery.min.js');
+    	//Yii::$app->view->registerJsFile('/js/jquery.min.js');
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
-    	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
-    	Yii::$app->view->registerJsFile('/js/zepto.min.js');
+    	//Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
+    	//Yii::$app->view->registerJsFile('/js/zepto.min.js');
     	$this->getView()->title = '正晖资本';
 
     	$news = News::find()->select('id, title, date')
