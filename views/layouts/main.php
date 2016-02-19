@@ -28,10 +28,13 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head()?>
     <link type="image/x-icon" href="/image/logo.png" rel="shortcut icon">
-    <script src="/js/jquery.min.js"></script>
+     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
 	<script src="/js/swiper.min.js"></script>
-	<script src="/js/swiper.animate.min.js"></script>
-	<script src="/js/zepto.min.js"></script>
+	 <!--[if lte IE 8]>
+ 
+   <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+   <![endif]-->
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -79,11 +82,18 @@ echo Nav::widget([
 ]);
 echo Html::beginForm(['site/search'], 'get', ['class' => 'navbar-form navbar-right']);
 echo Html::textInput('s', '',['class' => 'form-control', 'placeholder' => '搜索']);
-echo '<span class="submit" style="margin-left:-30px;"><img src="/headerimg/search.png" style="width:20px;height:20px;"><button id="submit-btn" type="submit" style="display:none;"></span>';
+echo <<<'EOF'
+<span class="submit" style="margin-left:-30px;">
+	<img src="/headerimg/search.png" style="width:20px;height:20px;">
+        <button id="submit-btn" type="submit" style="display:none;"></button>
+    </img>
+</span>
+EOF;
 echo Html::endForm();
     
 NavBar::end();
 ?>
+
 <?= Breadcrumbs::widget([
     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
 ]) ?>
