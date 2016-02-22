@@ -20,7 +20,7 @@
 	<div style="margin: 0; left: 0; top: 0px; width: 600px;float: left;height: 40px;font-size: 20px;line-height: 40px;">
 	正晖资讯
 	</div>
-	<div style="margin: 0;width: 240px;float: left;line-height: 40px;height: 40px;font-size: 20px;margin-left: 60px;">合作伙伴</div>
+	<div style="margin: 0;width: 240px;float: left;line-height: 40px;height: 40px;font-size: 20px;margin-left: 60px;">案例分享</div>
 	<div style="margin: 0; left: 0; top: 0; width: 600px;">
 		<a href="/site/about?type=0">
 			<div class="news first">
