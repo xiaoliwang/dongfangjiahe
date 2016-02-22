@@ -1,5 +1,5 @@
 <div
-	style="position: relative; top: 0; left: 0px; right: 0px; height: 300px;">
+	style="position: relative; top: 50px; left: 0px; right: 0px; height: 250px;">
 	<div class="swiper-container swiper-container-horizontal">
 		<div class="swiper-wrapper"
 			style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
@@ -16,8 +16,8 @@
 	<div class="swiper-pagination">
 	</div>
 </div>
-<div class="page-contanier" style="margin-top: 30px; width: 900px">
-	<div style="margin: 0; left: 0; top: 0; width: 600px;float: left;height: 40px;font-size: 20px;line-height: 40px;">
+<div class="page-contanier" style="margin-top: 80px; width: 900px">
+	<div style="margin: 0; left: 0; top: 0px; width: 600px;float: left;height: 40px;font-size: 20px;line-height: 40px;">
 	正晖资讯
 	</div>
 	<div style="margin: 0;width: 240px;float: left;line-height: 40px;height: 40px;font-size: 20px;margin-left: 60px;">合作伙伴</div>
@@ -44,7 +44,7 @@
 	<div class="swiper-container2" style="margin: 0;width: 260px; position: absolute; right: 0; top: 0;background-color: white;height: 180px;overflow:hidden;margin-top:40px;">
 	   
 		<div class="swiper-wrapper" style="">
-		<?php for($i=0;$i<4;$i++):?>
+		<?php //for($i=0;$i<4;$i++):?>
 		<div class="swiper-slide">
 		
 			<?php foreach($cases as $case) :?>
@@ -53,7 +53,7 @@
 				</a>
 			<?php endforeach;?>
 		</div>
-		<?php endfor;?>
+		<?php //endfor;?>
 		</div>
 	</div>
 </div>
@@ -75,10 +75,10 @@
         'paginationClickable': true
     });
    // setTimeout('changeSlide()', 3000);
-    var swiper2 = new Swiper('.swiper-container2', {
+    /*var swiper2 = new Swiper('.swiper-container2', {
     	'loop' : true,
     	'speed':1000,
     	'autoplay' : 2000,
         'mode' : 'vertical'
-    });
+    });*/
 </script>
