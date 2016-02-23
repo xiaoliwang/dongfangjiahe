@@ -56,6 +56,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+    	$this->layout = 'main3';
     	//Yii::$app->view->registerCssFile('/css/animate.min.css');
     	Yii::$app->view->registerCssFile('/css/swiper.min.css');
     	//Yii::$app->view->registerJsFile('/js/jquery.min.js');

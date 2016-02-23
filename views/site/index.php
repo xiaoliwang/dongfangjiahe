@@ -38,7 +38,7 @@
 				</div>
 			</div>
 		</a>
-		<div style="width: 600px;margin-top: 10px;float: left;">
+		<div style="width: 600px;margin-top: 10px;float: left; margin-bottom: 80px;">
 		<?php foreach ($news as $new) :?>
 		<a href="/site/article?id=<?= $new->id ?>" style="display: block;color: #999;width: 280px;margin-right: 20px;font-size: 12px; float: left; line-height: 24px;"><?= $new->title?><span style="float: right"><?= date('Y-m-d', $new->date)?></span></a>
 		<?php endforeach;?>
