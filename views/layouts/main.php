@@ -50,7 +50,8 @@ NavBar::begin([
 
 echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-Left'],
-	'activateParents' => true,
+	'activateItems' => false,
+	//'activateParents' => true,
     'items' => [
         ['label' => '主页', 'url' => ['/site/index']],
         ['label' => '关于我们', 'dropDownOptions' => ['class' => 'ul-transparent'],

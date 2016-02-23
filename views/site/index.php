@@ -1,5 +1,5 @@
 <div
-	style="position: relative; top: 50px; left: 0px; right: 0px; height: 250px;">
+	style="position: relative; top: 50px; left: 0px; right: 0px; height: 300px;">
 	<div class="swiper-container swiper-container-horizontal">
 		<div class="swiper-wrapper"
 			style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
@@ -31,7 +31,10 @@
 					style="width: 400px; margin-left: 10px; font-size: 12px; float: left; line-height: 15px; color: #000; ">正晖资本:小而美</div>
 				<div class="intro"
 					style="width: 400px; float: left; margin-left: 10px;font-size: 12px; height: 90px; overflow: hidden; color: #999;line-height: 22px;margin-top:10px;">
-					一段优美的文字，彰显小而美的价值
+					这是一群经过了海外资本资本市场、国内主板中小板创业板多层次资本市场精炼的人。<br />
+					这是一群有情怀、有理想、资深的专业人士。<br />
+					这是一群环抱着共同目标与愿景的人。<br />
+					这是志趣相投、彼此认同的一家人。
 				</div>
 			</div>
 		</a>
