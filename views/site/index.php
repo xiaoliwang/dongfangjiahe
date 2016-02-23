@@ -22,7 +22,6 @@
 	margin: 9px 10px 0 9px;
 }
 </style>
-<span class="point"></span>
 <div style="position: relative; top: 50px; height: 300px;">
 	<div class="swiper-container swiper-container-horizontal">
 		<div class="swiper-wrapper"
