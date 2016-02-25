@@ -20,7 +20,7 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-     <link type="image/x-icon" href="/image/logo.png" rel="shortcut icon">
+     <link type="image/x-icon" href="/image/29.png" rel="shortcut icon">
 </head>
 <body>
 <?php $this->beginBody() ?>

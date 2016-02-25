@@ -3,6 +3,7 @@
 	font-size: 20px;
 	padding-bottom: 12px;
 	font-family: SimSun;
+	font-weight: 900;
 }
 .point {
 	width: 6px;
