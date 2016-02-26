@@ -110,7 +110,7 @@ sizes, pagination, etc.
 /* ===============================================================
 Pagination Styles
 ================================================================*/
-.swiper-pagination {
+.swiper-pagination,.vw-frontpage-slidebtn-container {
     width: 48px;
     bottom: 0px;
     height: 20px;
@@ -120,7 +120,7 @@ Pagination Styles
     left: 0;
     right: 0;
 }
-.swiper-pagination-switch {
+.swiper-pagination-switch,.vw-frontpage-slidebtn {
     height: 8px;
     width: 8px;
     border-radius: 4px;
@@ -129,7 +129,7 @@ Pagination Styles
     float: left;
     margin: 10px 2px;
 }
-.swiper-active-switch {
+.swiper-active-switch,.fc-slidebtn.fc-slidebtn-active {
 	/* Specific active button style: */
     background-color: #cd3333;	
 }

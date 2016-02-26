@@ -21,6 +21,7 @@ a:hover, a:focus {
 .nav-transparent {
     background-color: rgba(34,34,34,0.7);
     border: 0;
+    font-weight: 900;
 }
 .ul-transparent li a{
     color: #fff;
@@ -322,5 +323,19 @@ input.form-control{
 
 input.form-control:focus{
 	       border-color: #830722;
+}
+
+.fc-slideimage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.slide1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 

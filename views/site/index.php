@@ -23,16 +23,23 @@
 	margin: 9px 10px 0 9px;
 }
 </style>
-<div style="position: relative; top: 50px; height: 300px;">
-	<div class="swiper-container swiper-container-horizontal">
-		<div class="swiper-wrapper"
-			style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
-			<?php foreach ($frontpages as $frontpage):?>
-			<div class="swiper-slide" style="background-image: url(/<?=$frontpage->pic?>);"></div>
-			<?php endforeach;?>
+<div style="position: relative; top: 50px; left: 0px; right: 0px; height: 300px;">
+	<div class="slide1">
+			<?php $i=0;foreach ($frontpages as $frontpage):?>
+			  <div class="fc-slideimage" style="<?php echo $i==0?'':'display: none;'?>background-image: url(/<?=$frontpage->pic?>);">
+			<!-- 	<div class="ani" style="position: absolute;bottom:100px;background-color: rgba(0, 0, 0, 0.44);color: #dfdfdf;width: 38%;height: 150px;padding:0px;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0s">
+				<p class="ani" style="color:#fff;font-size:40px;line-height:40px;font-weight:600;text-align:right;padding:10px 80px 5px;width:100%;border-bottom:1px solid #fff" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.5s"><?=$frontpage->title?></p>
+				<p class="ani" style="color:#fff;font-size:14px;line-height:20px;font-weight:400;padding:10px 20px;width:100%" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2s" swiper-animate-delay="1s"><?=$frontpage->summary?></p>
+			</div> -->
+		    </div>
+			<?php $i++;
+			endforeach;?>
+		<div class="vw-frontpage-slidebtn-container">
+			<div class="vw-frontpage-slidebtn fc-slidebtn fc-slidebtn-active"></div>
+			<div class="vw-frontpage-slidebtn fc-slidebtn"></div>
+			<div class="vw-frontpage-slidebtn fc-slidebtn"></div>
+			<div class="vw-frontpage-slidebtn fc-slidebtn"></div>
 		</div>
-	</div>
-	<div class="swiper-pagination">
 	</div>
 </div>
 <div class="page-contanier" style="margin-top: 80px; width:80%;max-width:1200px;min-width:900px;">
@@ -45,13 +52,18 @@
 			<div style="position:relative;">
 			<div style="position:absolute;margin-left:114px;top:0px;">
 				<div class="title"
-					style="width: 100%; margin-left: 10px; font-size: 12px; float: left; line-height: 15px; color: #000; ">正晖资本:小而美</div>
+					style="width: 100%; margin-left: 10px; float: left;">
+					<a href="/site/about?type=0" style="color:#000; font-size: 12px; line-height: 15px;">正晖资本:小而美</a>
+				</div>
 				
 				<div class="intro"
-					style="width: 100%; float: left; margin-left: 10px;font-size: 12px; height: 90px; overflow: hidden; color: #999;line-height: 22px;margin-top:10px;">
-					&nbsp;&nbsp;&nbsp;&nbsp;这是一群经过了海外资本资本市场、国内主板中小板创业板多层次资本市场历练的人。这是一群有情怀、有理想、资深的专业人士。这是一群环抱着共同目标与愿景的人。这是志趣相投、彼此认同的一家人。
+					style="width: 100%; float: left; margin-left: 10px; height: 90px; overflow: hidden; margin-top:10px;">
+					<a href="/site/about?type=0" style="color: #999;line-height: 22px; font-size: 12px;">
+						&nbsp;&nbsp;&nbsp;&nbsp;这是一群经过了海外资本资本市场、国内主板中小板创业板多层次资本市场历练的人。这是一群有情怀、有理想、资深的专业人士。这是一群环抱着共同目标与愿景的人。这是志趣相投、彼此认同的一家人。
+					</a>
 				</div>
 			</div>
+			</a>
 		</div>
 		<div style="width: 100%;margin-top: 10px;float: left; margin-bottom: 80px;">
 		<?php foreach ($news as $new) :?>
@@ -84,11 +96,36 @@
 
 
 <script>
-var swiper = new Swiper('.swiper-container', {
-	'loop' : true,
-	'speed':1000,
-	'autoplay' : 3000,
-    'pagination': '.swiper-pagination',
-    'paginationClickable': true
+var $movePointOutClass = $('.slide1 .fc-slidebtn'),
+$movePicClass = $('.slide1 .fc-slideimage'),
+interValFlag = false,
+moveNo = 0,
+moveTime = 1000,
+$movePicATags = $('.slide1 .fc-slideimage a');
+
+function startMove() {
+interValFlag = setInterval(function() {
+	if(moveNo != ($movePointOutClass.length - 1)) {
+		moveNo ++;
+	} else {
+		moveNo = 0;
+	}
+	$movePointOutClass.eq(moveNo).click();
+}, 5000);
+}
+
+$movePointOutClass.click(function() {
+moveNo = $(this).index();
+$movePointOutClass.removeClass('fc-slidebtn-active');
+$(this).addClass('fc-slidebtn-active');
+
+$movePicClass.fadeOut(moveTime);
+$movePicClass.eq(moveNo).fadeIn(moveTime);
+
+if(interValFlag) {
+	clearInterval(interValFlag);
+	startMove();
+}
 });
+startMove();
 </script>
