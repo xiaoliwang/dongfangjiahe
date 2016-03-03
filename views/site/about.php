@@ -49,7 +49,7 @@
 		<p
 				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">作为一家视客户需求为核心的金融服务机构，正晖资本为客户提供值得信赖和独到的建议，以协助企业客户实现其战略目标，并提供专业和成熟的解决方案。业务涵盖财务顾问、创业投资、地产投资等。</p>
 		<p
-			style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">财务顾问</p>
+			style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">上市公司合作业务</p>
 		<p
 				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">帮助企业设计全方面的咨询服务，包括企业经营咨询、企业财务梳理、企业战略咨询、资本市场运营以及企业投融资服务。
 				</p>

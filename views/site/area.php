@@ -24,13 +24,13 @@
 				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">帮助企业设计全方面的咨询服务，包括企业经营咨询、企业财务梳理、企业战略咨询、资本市场运营以及企业投融资服务。
 				</p>
 		<p
-			style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">财务顾问</p>
+			style="width: 200px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">上市公司合作业务</p>
 		<p
-				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">帮助企业完成“新三板”的挂牌上市，组建会计师事务所、律师事务所及券商的上市团队。缩短企业“新三板”上市的流程，节省“新三板”上市时间。帮助七夜完成后续的融资服务，提供相应定增资金；努力谋求被投企业的并购重组机会，并培训企业达到“转板”要求。</p>
+				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖基金通过股东和自身资源与上市公司建立深度合作，帮助上市公司进行市值维护，参与上市公司定增，共同讨论并购方案并实施。</p>
 		<p
-			style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">地产投资</p>
+			style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">文娱产业基金</p>
 		<p
-				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">参与股东优质地产项目，投资国内一二线商业住宅项目。</p>
+				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖基金与产业知名企业共同发起文娱产业产业基金，共建从孵化到退出的完整产业生态圈。</p>
 		
 		</div>
 	</div>

@@ -71,7 +71,7 @@ echo Nav::widget([
 			['label' => '2015', 'url' => ['/site/case', 'year' => 2015]],
 			['label' => '2016', 'url' => ['/site/case', 'year' => 2016]],
     	]],
-		['label' => '案例分析', 'dropDownOptions' => ['class' => 'ul-transparent'],
+		['label' => '公司动态', 'dropDownOptions' => ['class' => 'ul-transparent'],
 		'activateParents' => true,
 		'items' => [
 			['label' => '行业资讯', 'url' => ['/site/news', 'type' => 2]],

@@ -53,7 +53,7 @@
 			<div style="position:absolute;margin-left:114px;top:0px;">
 				<div class="title"
 					style="width: 100%; margin-left: 10px; float: left;">
-					<a href="/site/about?type=0" style="color:#000; font-size: 12px; line-height: 15px;">正晖资本:小而美</a>
+					<a href="/site/about?type=0" style="color:#000; font-size: 12px; line-height: 15px;">正晖资本:精致和完美</a>
 				</div>
 				
 				<div class="intro"
