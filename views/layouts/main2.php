@@ -21,6 +21,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
      <link type="image/x-icon" href="/image/29.png" rel="shortcut icon">
+     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
 </head>
 <body>
 <?php $this->beginBody() ?>
