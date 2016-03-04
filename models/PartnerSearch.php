@@ -62,7 +62,9 @@ class PartnerSearch extends Partner
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'link', $this->link])
         	->andFilterWhere(['type' => $this->type]);
-
+		
+        $query->orderBy('id desc');
+        	
         return $dataProvider;
     }
 }
