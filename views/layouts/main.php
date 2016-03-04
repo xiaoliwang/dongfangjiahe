@@ -64,7 +64,8 @@ echo Nav::widget([
     	['label' => '投资团队', 'dropDownOptions' => ['class' => 'ul-transparent'],
     		'activateParents' => true, 'items' => [
     		['label' => '团队介绍', 'url' => ['/site/people']],
-    		['label' => '案例分析', 'url' => ['/site/news', 'type' => 1]]
+    		['label' => '案例分析', 'url' => ['/site/partner', 'type' => 0]],
+    		//['label' => '案例分析', 'url' => ['/site/news', 'type' => 1]]
         ]],
 		['label' => '已投项目', 'dropDownOptions' => ['class' => 'ul-transparent'],
 			'activateParents' => true, 'items' => [
@@ -77,7 +78,7 @@ echo Nav::widget([
 			['label' => '行业资讯', 'url' => ['/site/news', 'type' => 2]],
 			['label' => '基金公告', 'url' => ['/site/news', 'type' => 3]],
         ]],
-    	['label' => '合作伙伴', 'url' => ['/site/partner']],
+    	['label' => '合作伙伴', 'url' => ['/site/partner', 'type' => 1]],
         ['label' => '联系我们', 'url' => ['/site/contact']],
     ],
 ]);

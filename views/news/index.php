@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
         		'value' => function($model){
         			return $model->getType();
    				},
-   				'filter' => [1 => '案例分析', 2 => '行业资讯', 3 => '基金公告', 4 => '投资案例'],
+   				'filter' => [2 => '行业资讯', 3 => '基金公告', 4 => '投资案例'],
         	],
 
             ['class' => 'yii\grid\ActionColumn'],

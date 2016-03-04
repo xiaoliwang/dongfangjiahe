@@ -1,4 +1,4 @@
-<div class="pageheader" style="background-image: url(/headerimg/26.jpg);background-position-y: 385px;">
+<div class="pageheader" style="background-image: url(/headerimg/<?= $type ? 26 : 27?>.jpg);background-position-y: 385px;">
 </div>
 <div class="page-contanier" style="margin-top: 100px;">
 	<div class="col">

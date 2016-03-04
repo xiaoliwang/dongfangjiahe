@@ -31,7 +31,7 @@ class Partner extends \yii\db\ActiveRecord
             [['title'], 'string', 'max' => 50],
             [['pic', 'link'], 'string', 'max' => 255],
         	[['link'], 'url', 'defaultScheme' => 'http'],
-        	[['title', 'link', 'pic'], 'required']
+        	[['title', 'link', 'pic', 'type'], 'required']
         ];
     }
 

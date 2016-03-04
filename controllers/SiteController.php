@@ -14,7 +14,6 @@ use app\models\News;
 use app\models\Frontpage;
 use app\models\Member;
 use app\models\Partner;
-use app\models\IndexFund;
 
 class SiteController extends Controller
 {
@@ -78,11 +77,14 @@ class SiteController extends Controller
         ]);
     }
     
-    public function actionPartner() {
-    	$this->getView()->title = '合作伙伴';
-    	$partener = Partner::find()->all();
+    public function actionPartner(int $type) {
+    	$this->getView()->title = $type ? '合作伙伴' : '案例分析';
+    	$partener = Partner::find()
+    		->where('type = :type', [':type' => $type])
+    		->all();
     	return $this->render('partner',array(
-    		'parteners'=>$partener
+    		'parteners'=>$partener,
+    		'type' => $type
     	));
     }
 
@@ -168,7 +170,7 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
     	Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	Yii::$app->view->registerJsFile('/js/zepto.min.js');
-    	$this->getView()->title = '案例分析';
+    	$this->getView()->title = '已投项目';
     	$query = News::find()->where('type = 4');
     	
     	$pagination = new Pagination([
@@ -176,8 +178,10 @@ class SiteController extends Controller
     		'totalCount' => $query->count(),
     	]);
     	
-    	$start_unix = ($year - 1970) * 31536000;
-    	$end_unix = $start_unix + 31536000;
+    	$year_str = $year . '0101';
+    	$next_year_str = $year + 1 . '0101';
+    	$start_unix = strtotime($year_str);
+    	$end_unix = strtotime($next_year_str);
     	
     	$news = $query->orderBy('date DESC')
     	->offset($pagination->offset)

@@ -65,13 +65,15 @@
 			</div>
 			</a>
 		</div>
-		<div style="width: 100%;margin-top: 10px;float: left; margin-bottom: 80px;">
+		<div style="width: 100%;margin-top: 10px;float: left; margin-bottom: 80px;position:relative;">
 		<?php foreach ($news as $new) :?>
 		<a href="/site/article?id=<?= $new->id ?>" style="display: block;color: #999;width: 50%;padding-right: 20px;box-sizing:border-box;font-size: 12px; float: left; line-height: 24px;">
 			<span class="small_point"></span><?= $new->title?><span style="float: right"><?= date('Y-m-d', $new->date)?></span>
 		</a>
 		<?php endforeach;?>
+		<a href="/site/case?year=2016" style="float: right;font-size: 11px;color: #ccc;">显示更多  >></a>
 		</div>
+		
 	</div>
 	<div style="float:right; width:220px; height:220px;position:relative;">
 		<div class="head1"><div class="text" style="width: 200px;"><span class="point"></span>案例分析</div></div>

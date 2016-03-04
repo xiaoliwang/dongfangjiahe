@@ -19,7 +19,7 @@ class PartnerSearch extends Partner
     {
         return [
             [['id'], 'integer'],
-            [['title', 'link'], 'safe'],
+            [['title', 'link', 'type'], 'safe'],
         ];
     }
 
@@ -60,7 +60,8 @@ class PartnerSearch extends Partner
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'link', $this->link]);
+            ->andFilterWhere(['like', 'link', $this->link])
+        	->andFilterWhere(['type' => $this->type]);
 
         return $dataProvider;
     }

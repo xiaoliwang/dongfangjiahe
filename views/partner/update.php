@@ -4,9 +4,9 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Partner */
-
+$type = \Yii::$app->request->get('type');
 $this->title = '更新合作伙伴: ' . ' ' . $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Partners', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Partners', 'url' => ['index', 'PartnerSearch' => ['type' => $type]]];
 $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

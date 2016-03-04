@@ -13,6 +13,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'type')->hiddenInput(['value' => \Yii::$app->request->get('type')])->label('') ?>
 
    	<?= $form->field($uploadForm, 'image', 
     		['labelOptions' => ['label' => '首页banner图']])->fileInput() ?>
@@ -27,7 +28,7 @@ use yii\widgets\ActiveForm;
     <div class="form-group">
         <?= $model->isNewRecord?'':Html::resetButton('重置', ['class' => 'btn btn-primary'])?>
         <?= Html::submitButton($model->isNewRecord ? '创建' : '更新', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    	<?= Html::a('返回列表页', ['index'], [
+    	<?= Html::a('返回列表页', ['index', 'PartnerSearch' => ['type' => $model->type]], [
             'class' => 'btn btn-success',
             'data' => [
                 'confirm' => '返回将会丢失所有未保存的内容?',

@@ -5,9 +5,11 @@ use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Partner */
+$type = \Yii::$app->request->get('type');
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Partners', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $this->title, 
+	'url' => ['index', 'PartnerSearch' => ['type' => $type]]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="partner-view">
@@ -16,14 +18,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
          <?= Html::a('更新', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('删除', ['delete', 'id' => $model->id], [
+        <?= Html::a('删除', ['delete', 'id' => $model->id, 'type' => $type], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => '你真的要删除这个首页模板吗?',
                 'method' => 'post',
             ],
         ]) ?>
-        <?= Html::a('返回列表页', ['index'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('返回列表页', ['index', 'PartnerSearch' => ['type' => $type]], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= DetailView::widget([

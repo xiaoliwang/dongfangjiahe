@@ -86,7 +86,7 @@ class PartnerController extends Controller
 				$model->pic = 'image/' . md5($_SERVER['REQUEST_TIME']. $form->image->baseName) . $_SERVER['REQUEST_TIME'] . '.' . $form->image->extension;
 				$form->image->saveAs($model->pic);
 				$model->save();
-	        	return $this->redirect(['view', 'id' => $model->id]);
+	        	return $this->redirect(['view', 'id' => $model->id, 'type' => $model->type]);
 			} else {
 				$form->addError('image', '图片不可为空');
 			}
@@ -114,7 +114,7 @@ class PartnerController extends Controller
         		$form->image->saveAs($model->pic);
         	}
         	$model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id, 'type' => $model->type]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -129,14 +129,14 @@ class PartnerController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($id, $type)
     {
         $model = $this->findModel($id);
         if (file_exists($model->pic))
         	unlink($model->pic);
         $model->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect(['index', 'PartnerSearch' => ['type' => $type]]);
     }
 
     /**

@@ -7,6 +7,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
 	'language' => 'zh-CN',
+	'timeZone'=>'Asia/Chongqing',
 	'modules' => [
 			'redactor' => [
 				'class' => 'yii\redactor\RedactorModule',

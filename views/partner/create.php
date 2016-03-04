@@ -5,9 +5,11 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Partner */
+$type = \Yii::$app->request->get('type');
+$this->title = $type ? '合作伙伴' : '案例分析';
 
-$this->title = '创建合作伙伴';
-$this->params['breadcrumbs'][] = ['label' => 'Partners', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $this->title,
+	'url' => ['index', 'PartnerSearch' => ['type' => $type]]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="partner-create">
