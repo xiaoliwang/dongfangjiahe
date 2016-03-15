@@ -22,6 +22,16 @@
 	float: left;
 	margin: 9px 10px 0 9px;
 }
+
+.title_not_too_long {
+	font-size: 12px;
+    width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    line-height: 25px;
+}
 </style>
 <div style="position: relative; top: 50px; left: 0px; right: 0px; height: 300px;">
 	<div class="slide1">
@@ -68,10 +78,14 @@
 		<div style="width: 100%;margin-top: 10px;float: left; margin-bottom: 80px;position:relative;">
 		<?php foreach ($news as $new) :?>
 		<a href="/site/article?id=<?= $new->id ?>" style="display: block;color: #999;width: 50%;padding-right: 20px;box-sizing:border-box;font-size: 12px; float: left; line-height: 24px;">
-			<span class="small_point"></span><?= $new->title?><span style="float: right"><?= date('Y-m-d', $new->date)?></span>
+			<span class="small_point"></span>
+			<span class="title_not_too_long">
+				<?= $new->title?>
+			</span>	
+			<span style="float: right"><?= date('Y-m-d', $new->date)?></span>
 		</a>
 		<?php endforeach;?>
-		<a href="/site/case?year=2016" style="float: right;font-size: 11px;color: #ccc;">显示更多  >></a>
+		<a href="/site/case?year=2016" style="float: right;font-size: 11px;color: #999;">显示更多  >></a>
 		</div>
 		
 	</div>
