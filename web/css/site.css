@@ -339,3 +339,6 @@ input.form-control:focus{
     height: 100%;
 }
 
+.article .content p {
+    text-indent: 30px;
+}
