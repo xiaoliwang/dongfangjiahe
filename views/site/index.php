@@ -85,7 +85,7 @@
 			<span style="float: right"><?= date('Y-m-d', $new->date)?></span>
 		</a>
 		<?php endforeach;?>
-		<a href="/site/case?year=2016" style="float: right;font-size: 11px;color: #999;">显示更多  >></a>
+		<a href="/site/news?type=2" style="float: right;font-size: 11px;color: #999;">显示更多  >></a>
 		</div>
 		
 	</div>
