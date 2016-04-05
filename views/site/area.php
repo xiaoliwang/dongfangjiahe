@@ -14,24 +14,23 @@
 	<div class="about-2"
 		style="position: relative; width: 800px; left: 200px; top: 100px; height: 500px;">
 		<div style="margin-top: 0px;">
-			<p
-			style="font-size: 30px; font-weight: 100; text-align: center;">业务领域</p>
-		<p
-				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">作为一家视客户需求为核心的金融服务机构，正晖资本为客户提供值得信赖和独到的建议，以协助企业客户实现其战略目标，并提供专业和成熟的解决方案。业务涵盖财务顾问、创业投资、地产投资等。</p>
-		<p
-			style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">财务顾问</p>
-		<p
-				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">帮助企业设计全方面的咨询服务，包括企业经营咨询、企业财务梳理、企业战略咨询、资本市场运营以及企业投融资服务。
-				</p>
-		<p
-			style="width: 200px;margin: 0 300px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">上市公司合作业务</p>
-		<p
-				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖基金通过股东和自身资源与上市公司建立深度合作，帮助上市公司进行市值维护，参与上市公司定增，共同讨论并购方案并实施。</p>
-		<p
-			style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">文娱产业基金</p>
-		<p
-				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖基金与产业知名企业共同发起文娱产业产业基金，共建从孵化到退出的完整产业生态圈。</p>
-		
+		<!-- <p style="font-size: 30px; font-weight: 100; text-align: center;">VC/PE</p> -->
+		<p style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">VC/PE</p>
+		<p style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">
+			秉持价值投资与主动价值改变的理念，通过私募股权基金对有发展潜力的非上市企业进行权益性投资，在交易实施过程中附带考虑了将来的退出机制。重点关注文化娱乐、TMT、大农业、大消费等行业领域中各阶段的优质企业，纵贯全产业链，深度挖掘投资机会。
+		</p>
+		<p style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">定向增发</p>
+		<p style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">
+			秉持价值投资理念，通过自下而上和深入细致的研究，筛选具备吸引力和拥有可预测增长潜力的优质上市公司作为投资目标，利用行业及投资经验，参与上市公司定向增发业务，为投资者带来预期收益。
+		</p>
+		<p style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">并购重组</p>
+		<p style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">
+			正晖基金通过股东和自身资源与上市公司建立深度合作，帮助上市公司进行市值维护，参与上市公司定增，共同讨论并购方案并实施。
+		</p>
+		<p style="width: 140px;margin: 0 330px;font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px;border: 1px solid #ccc;line-height: 30px;">文娱产业</p>
+		<p style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">
+			秉承市场主导理念，选择文化内容和传播渠道领域中市场条件好、发展潜力大的文化及文化创意和新媒体企业，通过主导投资或共同投资等方式进行股权投资。投资重点涵盖网络影视、动漫、手游等创新型行业。
+		</p>
 		</div>
 	</div>
 </div>
