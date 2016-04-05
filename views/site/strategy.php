@@ -23,16 +23,16 @@
 					alt="公司简介" src="/image/about-5-1.png">
 			</div>
 			<p
-				style="width: 140px; margin: 40px 330px 0; font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px; border: 1px solid #ccc; line-height: 30px;">创新优势</p>
+				style="width: 140px; margin: 40px 330px 0; font-size: 20px; font-weight: 600; text-align: center; margin-top: 20px; border: 1px solid #ccc; line-height: 30px;">创新优势</p>
 			<p
 				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本在投资理念、投资模式和管理机制上，实现发现价值、改造价值、实业释放、金融释放、杠杆释放的全方位创新</p>
 			<p
-				style="width: 140px; margin: 40px 330px 0; font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px; border: 1px solid #ccc; line-height: 30px;">资源优势
+				style="width: 140px; margin: 40px 330px 0; font-size: 20px; font-weight: 600; text-align: center; margin-top: 20px; border: 1px solid #ccc; line-height: 30px;">资源优势
 			</p>
 			<p
 				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本辅导的企业已经有近10家在新三板时长成功上市，拟上市企业近20余家。同时依托股东资源优势，为主板上市公司提供财务顾问服务，进一步实现全方位立体式产业布局</p>
 			<p
-				style="width: 140px; margin: 40px 330px 0; font-size: 20px; font-weight: 100; text-align: center; margin-top: 20px; border: 1px solid #ccc; line-height: 30px;">人才优势
+				style="width: 140px; margin: 40px 330px 0; font-size: 20px; font-weight: 600; text-align: center; margin-top: 20px; border: 1px solid #ccc; line-height: 30px;">人才优势
 			</p>
 			<p
 				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本拥有强大的政策、项目、财富、和管理优势。同时外聘了包括法律、财务、审计多领域专家作为顾问。组成了正晖基金强大的顾问团队。进一步提升了正晖资本人才资源优势</p>
