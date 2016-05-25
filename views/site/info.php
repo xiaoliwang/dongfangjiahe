@@ -19,7 +19,7 @@
 					
 				</p >
 			<p
-				style="font-size: 16px; font-weight: 100; width: 655px; margin-left: 129px; float: left; line-height: 30px;">
+				style="font-size: 16px; font-weight: 100; width: 655px; margin-top: 10px; margin-left: 129px; float: left; line-height: 30px;">
 			正晖资本总部位于北京，在上海、成都、昆明、德州设有分支机构。管理了多支人民币基金。正晖资本专注于投资泛娱乐文化、现代农业与消费服务、能源与大宗商品、TMT、军工、上市公司金融服务等六大行业及领域。</p>
 		</div>
 	</div>
