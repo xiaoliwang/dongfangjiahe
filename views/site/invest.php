@@ -23,7 +23,8 @@
 				<p
 					style="font-size: 20px; font-weight: 300; text-align: center; margin-top: 40px; width: 260px;">新恒基集团</p>
 				<p
-					style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin-top: 10px; width: 260px;">经过二十余年的拼搏，新恒基集团创造了年增长30%的发展速度，目前集团总资产已超过200亿元，旗下拥有了17加控股公司，一家上市公司，形成了以房地产开发为核心，涵盖写字楼及酒店管理、金融投资、网络通信、高新科技、生物制药、物流运营、物业管理等领域的多元化综合型企业集团。
+					style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin-top: 10px; width: 260px;">
+					新恒基集团经历二十多年的发展，创造了年增长30%的发展速度，目前集团总资产已超过200亿元，旗下拥有17家控股公司，多家上市公司。形成了以地产开发为核心，涵盖写字楼及酒店管理、金融投资、网络通信、高新科技、生物制药、 多元化综合型企业集团。
 				</p>
 			</div>
 			<div style="margin: 20px 40px; width: 260px; float: left;">
@@ -33,7 +34,9 @@
 				<p
 					style="font-size: 20px; font-weight: 300; text-align: center; margin-top: 40px; width: 260px;">四川大东</p>
 				<p
-					style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin-top: 10px; width: 260px; height: 174px;">四川大东集团经历20多年的发展，采取全资、控股、参股、关联等方式对下属企业进行管理，集团业务广泛覆盖房地产开发、城市建设，精细化工及新能源、环保等产业并逐步向创投资本、股权投资转型升级。凭借得天独厚的人才、科技和资源优势，四川打动集团已成为集人才、资金、管理模式和经营理念于一体大型民营企业。</p>
+					style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin-top: 10px; width: 260px; height: 174px;">
+					四川大东集团经历二十多年的发展，采取全资、控股、参股、关联等方式对下属企业进行管理。集团业务广泛涵盖地产开发、城市建设，精细化工及新能源、环保等产业并逐步向资本市场、股权投资转型升级。
+				</p>
 			</div>
 		</div>
 	</div>

@@ -27,7 +27,7 @@
 			<p
 				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本在投资理念、投资模式和管理机制上，实现发现价值、改造价值、实业释放、金融释放、杠杆释放的全方位创新</p>
 			<p
-				style="width: 140px; margin: 40px 330px 0; font-size: 20px; font-weight: 600; text-align: center; margin-top: 20px; border: 1px solid #ccc; line-height: 30px;">资源优势
+				style="width: 140px; margin: 40px 330px 0; font-size: 20px; font-weight: 600; text-align: center; margin-top: 20px; border: 1px solid #ccc; line-height: 30px;">新三板市场
 			</p>
 			<p
 				style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">正晖资本辅导的企业已经有近10家在新三板时长成功上市，拟上市企业近20余家。同时依托股东资源优势，为主板上市公司提供财务顾问服务，进一步实现全方位立体式产业布局</p>

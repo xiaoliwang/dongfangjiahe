@@ -14,7 +14,13 @@
 				style="width: 370px; margin-left: 10px; float: left; margin: 0 30px 0 130px;"
 				alt="公司简介" src="/headerimg/all.jpg">
 			<p
-				style="font-size: 16px; font-weight: 100; width: 230px; margin-left: 10px; float: left; line-height: 30px;">北京正晖基金管理有限公司（简称正晖资本）是中国证券投资基金业协会备案登记的专注于股权投资及管理的专业机构，拥有一支经验丰富精诚合作的管理团队。公司高管分别来自与国内各大银行、基金公司或投资机构，平均金融从业经历逾十年均有丰富的投资管理和市场经验。</p>
+				style="font-size: 16px; font-weight: 100; width: 230px; margin-left: 10px; float: left; line-height: 30px;">
+					『北京正晖基金管理有限公司』（简称正晖资本）是 在中国证券投资基金业协会备案登记的专注于股权投资及管理的专业机构。秉承一贯的价值创造，全面提升企业价值和投资价值，是中国企业家和投资人最值得信赖的长期合作伙伴。
+					
+				</p >
+			<p
+				style="font-size: 16px; font-weight: 100; width: 655px; margin-left: 129px; float: left; line-height: 30px;">
+			正晖资本总部位于北京，在上海、成都、昆明、德州设有分支机构。管理了多支人民币基金。正晖资本专注于投资泛娱乐文化、现代农业与消费服务、能源与大宗商品、TMT、军工、上市公司金融服务等六大行业及领域。</p>
 		</div>
 	</div>
 </div>
