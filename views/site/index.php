@@ -99,7 +99,7 @@
 		<div class="swiper-slide">
 		
 			<?php foreach($cases as $case) :?>
-				<a href="/site/case?year=2015" class="icon" style="margin-right: 30px;margin-bottom: 10px;float: left;display: block;width: 80px;height: 80px;">
+				<a href="/site/article?id=<?=$case->id?>" class="icon" style="margin-right: 30px;margin-bottom: 10px;float: left;display: block;width: 80px;height: 80px;">
 					<img src="/<?=$case->pic?>" alt="" style="width: 80px;height: 80px;" >
 				</a>
 			<?php endforeach;?>

@@ -14,6 +14,7 @@ use app\models\News;
 use app\models\Frontpage;
 use app\models\Member;
 use app\models\Partner;
+use yii\web\HttpException;
 
 class SiteController extends Controller
 {
@@ -67,7 +68,7 @@ class SiteController extends Controller
     	$news = News::find()->select('id, title, date')
     		->limit(4)->orderBy('id desc')->where('type in (1, 2, 3)')->all();
     	
-    	$cases = News::find()->select('pic')->limit(8)->where('type = 4')->all();
+    	$cases = News::find()->select('id, pic')->limit(8)->where('type = 4')->all();
     	
     	$frontpages = Frontpage::find()->where(['used' => 1])->all();
         return $this->render('index', [
@@ -158,6 +159,7 @@ class SiteController extends Controller
     
     public function actionArticle($id) {
     	$article = News::findOne($id);
+    	if (!$article) throw new HttpException(404, "该文章已经不存在");
     	return $this->render('article',[
     			'article' => $article,
     	]);
