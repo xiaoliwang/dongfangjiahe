@@ -75,6 +75,7 @@ echo Nav::widget([
 		['label' => '公司动态', 'dropDownOptions' => ['class' => 'ul-transparent'],
 		'activateParents' => true,
 		'items' => [
+			['label' => '公司新闻', 'url' => ['/site/news', 'type' => 1]],
 			['label' => '行业资讯', 'url' => ['/site/news', 'type' => 2]],
 			['label' => '基金公告', 'url' => ['/site/news', 'type' => 3]],
         ]],

@@ -61,6 +61,9 @@ class News extends \yii\db\ActiveRecord
     public function getType()
     {
     	switch ($this->type) {
+    		case 1:
+    			return '公司新闻';
+    			break;
     		case 2:
     			return '行业资讯';
     			break;
