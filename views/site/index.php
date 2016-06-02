@@ -92,19 +92,27 @@
 	<div style="float:right; width:220px; height:220px;position:relative;">
 		<div class="head1"><div class="text" style="width: 200px;"><span class="point"></span>案例分析</div></div>
 
-		<div class="swiper-container2" style="margin: 0;width: 100%; position: absolute; right: 0; top: 0;background-color: white;height: 180px;overflow:hidden;margin-top:40px;">
+		<div class="swiper-container" style="margin: 0;width: 100%; position: absolute; right: 0; top: 0;background-color: white;height: 180px;overflow:hidden;margin-top:40px;">
 	   
 		<div class="swiper-wrapper" style="">
-		<?php //for($i=0;$i<4;$i++):?>
+		<?php 
+		$count = count($cases);
+		$page = ceil($count / 4);
+		?>
+		<?php for($i = 0; $i < $page; ++$i):?>
 		<div class="swiper-slide">
 		
-			<?php foreach($cases as $case) :?>
-				<a href="/site/article?id=<?=$case->id?>" class="icon" style="margin-right: 30px;margin-bottom: 10px;float: left;display: block;width: 80px;height: 80px;">
-					<img src="/<?=$case->pic?>" alt="" style="width: 80px;height: 80px;" >
+			<?php for($j = 0; $j < 4; ++$j) :?>
+				<?php 
+				$index = 4 * $i + $j;
+				if ($index > $count - 1) break;
+				?>
+				<a href="/site/article?id=<?=$cases[$index]->id?>" class="icon" style="margin-right: 30px;margin-bottom: 10px;float: left;display: block;width: 80px;height: 80px;">
+					<img src="/<?=$cases[$index]->pic?>" alt="" style="width: 80px;height: 80px;" >
 				</a>
-			<?php endforeach;?>
+			<?php endfor;?>
 		</div>
-		<?php //endfor;?>
+		<?php endfor;?>
 		</div>
 	</div>
 	</div>
@@ -144,4 +152,11 @@ if(interValFlag) {
 }
 });
 startMove();
+
+var mySwiper = new Swiper('.swiper-container', {
+    speed: 800,
+    spaceBetween: 100,
+    autoplay: 2500,
+    autoplayDisableOnInteraction: false,
+});   
 </script>
