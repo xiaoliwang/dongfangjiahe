@@ -154,9 +154,10 @@ if(interValFlag) {
 startMove();
 
 var mySwiper = new Swiper('.swiper-container', {
-    speed: 800,
-    spaceBetween: 100,
+    speed: 2000,
+    spaceBetween: 5000,
     autoplay: 2500,
-    autoplayDisableOnInteraction: false,
+    loop: true
+    //autoplayDisableOnInteraction: false,
 });   
 </script>
