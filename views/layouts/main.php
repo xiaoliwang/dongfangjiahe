@@ -113,6 +113,14 @@ NavBar::end();
 	</div>
 </footer>
 <script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4e8993b8928fc5a1ac020cc004881a07";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
     $('span.submit').click(function(){
     	$('#submit-btn').click(); 
     });
