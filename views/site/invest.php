@@ -16,7 +16,7 @@
 		<div style="margin-top: 0px;">
             <p style="font-size: 30px; font-weight: 100; text-align: center;">股东介绍</p>
             <!--<div style="margin: 20px 40px 0 100px; width: 100%">
-                <img style="width: 260px; margin-left: 10px; float: left; margin: 0 0px 20px; height: 174px;" alt="新恒基集团" src="/image/about-3-2.png">
+                <img style="width: 260px; margin-left: 10px; float: left; margin: 0 0px 20px; height: 174px;" alt="四川大东" src="/image/about-3-2.png">
                 <div style="float: left; width: 540px">
                     <p style="font-size: 20px; font-weight: 300; text-align: center;">四川大东</p>
                     <p style="float: left; font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 20px 10px; height: 174px;">
@@ -40,9 +40,8 @@
 			<div style="margin: 20px 200px; width: 400px; float: left;">
 				<img
 					style="width: 400px; margin-left: 10px; float: left; margin: 0 0px 20px;"
-					alt="新恒基集团" src="/image/about-3-2.png">
-				<p
-					style="font-size: 20px; font-weight: 300; text-align: center; margin-top: 40px; width: 400px;">四川大东</p>
+					alt="四川大东" src="/image/about-3-2.png">
+				<!--<p style="font-size: 20px; font-weight: 300; text-align: center; margin-top: 40px; width: 400px;">四川大东</p>-->
 				<p
 					style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin-top: 10px; width: 400px; height: 174px;">
 					四川大东集团经历二十多年的发展，采取全资、控股、参股、关联等方式对下属企业进行管理。集团业务广泛涵盖地产开发、城市建设，精细化工及新能源、环保等产业并逐步向资本市场、股权投资转型升级。
