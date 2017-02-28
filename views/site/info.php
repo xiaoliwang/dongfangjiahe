@@ -12,7 +12,7 @@
 		<div style="margin-top: 20px;">
 			<img
 				style="width: 370px; margin-left: 10px; float: left; margin: 0 30px 0 130px;"
-				alt="公司简介" src="/headerimg/all.jpg">
+				alt="公司简介" src="/headerimg/test123.jpg">
 			<p
 				style="font-size: 16px; font-weight: 100; width: 230px; margin-left: 10px; float: left; line-height: 30px;">
 					『北京东方佳合基金管理有限公司』（简称东方佳合）是 在中国证券投资基金业协会备案登记的专注于股权投资及管理的专业机构。秉承一贯的价值创造，全面提升企业价值和投资价值，是中国企业家和投资人最值得信赖的长期合作伙伴。
