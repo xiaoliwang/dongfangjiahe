@@ -37,7 +37,7 @@
 		</p>
 		<p class="title_with_rectangle">并购重组</p>
 		<p style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">
-			正晖基金通过股东和自身资源与上市公司建立深度合作，帮助上市公司进行市值维护，参与上市公司定增，共同讨论并购方案并实施。
+			东方佳合基金通过股东和自身资源与上市公司建立深度合作，帮助上市公司进行市值维护，参与上市公司定增，共同讨论并购方案并实施。
 		</p>
 		<p class="title_with_rectangle">文娱产业</p>
 		<p style="font-size: 16px; line-height: 30px; font-weight: 300; text-align: center; margin: 10px 100px 0 100px; width: 600px;">

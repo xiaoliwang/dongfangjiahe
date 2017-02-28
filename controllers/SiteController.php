@@ -63,7 +63,7 @@ class SiteController extends Controller
     	Yii::$app->view->registerJsFile('/js/swiper.min.js');
     	//Yii::$app->view->registerJsFile('/js/swiper.animate.min.js');
     	//Yii::$app->view->registerJsFile('/js/zepto.min.js');
-    	$this->getView()->title = '正晖资本';
+    	$this->getView()->title = '东方佳合';
 
     	$news = News::find()->select('id, title, date')
     		->limit(4)->orderBy('id desc')->where('type in (1, 2, 3)')->all();

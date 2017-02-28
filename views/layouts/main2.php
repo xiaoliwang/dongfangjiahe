@@ -65,7 +65,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; 正晖资本 <?= date('Y') ?></p>
+        <p class="pull-left">&copy; 东方佳合 <?= date('Y') ?></p>
 
         <p class="pull-right"><?= 'Tom Cao' ?></p>
     </div>

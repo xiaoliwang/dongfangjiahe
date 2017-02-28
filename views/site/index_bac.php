@@ -18,17 +18,17 @@
 </div>
 <div class="page-contanier" style="margin-top: 80px; width: 1200px">
 	<div style="margin: 0; left: 0; top: 0px; width: 900px;float: left;height: 40px;font-size: 20px;line-height: 40px;">
-	正晖资讯
+	东方佳合资讯
 	</div>
 	<div style="margin: 0;width: 240px;float: left;line-height: 40px;height: 40px;font-size: 20px;margin-left: 60px;">案例分享</div>
 	<div style="margin: 0; left: 0; top: 0; width: 900px;">
 		<a href="/site/about?type=0">
 			<div class="news first">
 				<div class="img" style="width: 140px; height: 120px; float: left;">
-					<img alt="正晖资本:小而美" src="http://i6.download.fd.pchome.net/t_960x600/g1/M00/04/1D/oYYBAFHjo5iIUZ5rAAWT6vomydwAAAvlQGYgMYABZQC186.jpg" style="width: 112px; height: 112px; margin:4px 14px;">
+					<img alt="东方佳合:小而美" src="http://i6.download.fd.pchome.net/t_960x600/g1/M00/04/1D/oYYBAFHjo5iIUZ5rAAWT6vomydwAAAvlQGYgMYABZQC186.jpg" style="width: 112px; height: 112px; margin:4px 14px;">
 				</div>
 				<div class="title"
-					style="width: 700px; margin-left: 10px; font-size: 12px; float: left; line-height: 15px; color: #000; ">正晖资本:小而美</div>
+					style="width: 700px; margin-left: 10px; font-size: 12px; float: left; line-height: 15px; color: #000; ">东方佳合:小而美</div>
 				<div class="intro"
 					style="width: 700px; float: left; margin-left: 10px;font-size: 12px; height: 90px; overflow: hidden; color: #999;line-height: 22px;margin-top:10px;">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这是一群经过了海外资本资本市场、国内主板中小板创业板多层次资本市场历练的人。这是一群有情怀、有理想、资深的专业人士。这是一群环抱着共同目标与愿景的人。这是志趣相投、彼此认同的一家人。

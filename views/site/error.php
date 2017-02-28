@@ -5,7 +5,7 @@
 /* @var $message string */
 /* @var $exception Exception */
 
-$this->title = '正晖资本';
+$this->title = '东方佳合';
 ?>
 <div class="pageheader" style="background-image: url(/headerimg/15.jpg);">
 </div>

@@ -22,8 +22,8 @@ AppAsset::register($this);
 <meta name="robots" content="index,fllow">
 <meta name="author" content="Tom Jiepeng Cao">
 <meta name="copyright" content="MIT">
-<meta name="description" content="北京正晖基金管理有限公司秉承 “小而美” 的企业理念，追求精益求精的价值发现、价值实现和价值释放。">
-<meta name="keywords" content="正晖,正晖基金,正晖资本,北京正晖资本,北京正晖基金管理有限公司,基金,金融,投资管理,PE,民营">   
+<meta name="description" content="北京东方佳合基金管理有限公司秉承 “小而美” 的企业理念，追求精益求精的价值发现、价值实现和价值释放。">
+<meta name="keywords" content="东方佳合,东方佳合基金,东方佳合,北京东方佳合,北京东方佳合基金管理有限公司,基金,金融,投资管理,PE,民营">
     <?= Html::csrfMetaTags()?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head()?>

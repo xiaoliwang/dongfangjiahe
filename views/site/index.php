@@ -55,7 +55,7 @@
 <div class="page-contanier" style="margin-top: 80px; width:80%;max-width:1200px;min-width:900px;">
 	<div style="float:left; width:73%; height:220px;">
 		<div class="head1">
-			<div class="text" style="width: 100%;"><span class="point"></span>正晖资讯</div>
+			<div class="text" style="width: 100%;"><span class="point"></span>东方佳合资讯</div>
 		</div>
 		<img src="/headerimg/28.jpg" 
 				style="height:100px;width:100px;float:left;border:2px solid #fff; box-shadow:0 0 20px #bbb;"/>
@@ -63,7 +63,7 @@
 			<div style="position:absolute;margin-left:114px;top:0px;">
 				<div class="title"
 					style="width: 100%; margin-left: 10px; float: left;">
-					<a href="/site/about?type=0" style="color:#000; font-size: 12px; line-height: 15px;">正晖资本:精致和完美</a>
+					<a href="/site/about?type=0" style="color:#000; font-size: 12px; line-height: 15px;">东方佳合:精致和完美</a>
 				</div>
 				
 				<div class="intro"

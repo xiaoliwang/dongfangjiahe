@@ -27,7 +27,7 @@ use yii\widgets\ActiveForm;
     ?>
 	</div>
 	
-    <?= $form->field($model, 'from')->textInput(['maxlength' => true, 'placeholder' => '正晖资本']) ?>
+    <?= $form->field($model, 'from')->textInput(['maxlength' => true, 'placeholder' => '东方佳合']) ?>
 
     <?= $form->field($model, 'content')->widget(\yii\redactor\widgets\Redactor::className(),[
     		'clientOptions' => [

@@ -84,7 +84,7 @@ class NewsController extends Controller
         		$form->image->saveAs($model->pic);
         	}
         	if (!$model->from)
-        		$model->from = '正晖资本';
+        		$model->from = '东方佳合';
         	if ($model->save()) {
         		return $this->redirect(['view', 'id' => $model->id]);
         	}
