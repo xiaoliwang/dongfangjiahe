@@ -25,7 +25,7 @@
 
 .title_not_too_long {
 	font-size: 12px;
-    width: 220px;
+    width: 130px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -53,7 +53,7 @@
 	</div>
 </div>
 <div class="page-contanier" style="margin-top: 80px; width:80%;max-width:1200px;min-width:900px;">
-	<div style="float:left; width:73%; height:220px;">
+	<div style="float:left; width:49%; height:220px;">
 		<div class="head1">
 			<div class="text" style="width: 100%;"><span class="point"></span>东方佳合资讯</div>
 		</div>
@@ -89,8 +89,8 @@
 		</div>
 		
 	</div>
-	<div style="float:right; width:220px; height:220px;position:relative;">
-		<div class="head1"><div class="text" style="width: 200px;"><span class="point"></span>案例分析</div></div>
+	<div style="float:right; width:49%; height:220px;position:relative;">
+		<div class="head1"><div class="text" style="width: 100%;"><span class="point"></span>行业资讯</div></div>
 
 		<div class="swiper-container" style="margin: 0;width: 100%; position: absolute; right: 0; top: 0;background-color: white;height: 180px;overflow:hidden;margin-top:40px;">
 	   

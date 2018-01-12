@@ -234,7 +234,7 @@ body, html, input, textarea {
 .article #intro-content.active,
 .article #diagram-content.active{
 	display:block;
-} 
+}
 .article #intro-content,
 .article #diagram-content {
     display: none;
@@ -273,9 +273,9 @@ body, html, input, textarea {
 }
 .footer {
     z-index: 50;
-    height: 50px;
+    height: 35px;
     background-color: rgba(34, 34, 34, 0.7);
-    padding-top: 15px;
+    padding-top: 5px;
     text-align: center;
     position: absolute;
     width: 100%;
@@ -341,4 +341,9 @@ input.form-control:focus{
 
 .article .content p {
     text-indent: 30px;
+}
+
+.navbar-nav > li {
+    padding-left: 10px;
+    padding-right: 10px;
 }

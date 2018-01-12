@@ -8,7 +8,7 @@
 	</div>
 	<div class="about-2"
 		style="position: relative; width: 800px; left: 200px; top:100px;height: 500px;">
-		<p style="font-size: 30px; font-weight: 100; text-align: center">公司介绍</p>
+		<p style="font-size: 30px; font-weight: 600; text-align: center">公司介绍</p>
 		<div style="margin-top: 20px;">
 			<img
 				style="width: 370px; margin-left: 10px; float: left; margin: 0 30px 0 130px;"

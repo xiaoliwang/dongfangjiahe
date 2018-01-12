@@ -14,7 +14,7 @@
 	<div class="about-2"
 		style="position: relative; width: 800px; left: 200px; top: 100px; height: 500px;">
 		<div style="margin-top: 0px;">
-            <p style="font-size: 30px; font-weight: 100; text-align: center;">股东介绍</p>
+            <p style="font-size: 30px; font-weight: 600; text-align: center;">股东介绍</p>
             <!--<div style="margin: 20px 40px 0 100px; width: 100%">
                 <img style="width: 260px; margin-left: 10px; float: left; margin: 0 0px 20px; height: 174px;" alt="四川大东" src="/image/about-3-2.png">
                 <div style="float: left; width: 540px">
