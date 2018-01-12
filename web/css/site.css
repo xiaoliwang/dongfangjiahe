@@ -15,7 +15,7 @@ a:hover, a:focus {
 .wrap {
     min-height: 100%;
     height: auto;
-    margin: 0 auto -20px;
+    margin: 0 auto 0;
     padding: 0 0 50px;
 }
 .nav-transparent {

@@ -101,7 +101,7 @@ NavBar::end();
 <?= $content ?>
 </div>
 
-<footer class="footer" style="position: fixed;bottom:0px;">
+<footer class="footer" style="position: fixed;bottom:0px;margin-bottom:5px">
 	<div class="container">
 		<p style="float:left;position:relative;line-height:25px;font-size:12px;" >
         	<?=Html::a('隐私政策', '/site/policy?type=0', ['style' => 'color:#9d9d9d'])?>&nbsp;
