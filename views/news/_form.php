@@ -37,7 +37,16 @@ use yii\widgets\ActiveForm;
     ]) ?>
 
 
-	<?= $form->field($model, 'type')->dropDownList([1=> '公司新闻', 2 => '行业资讯', 3 => '基金公告', 4 => '投资案例']) ?>
+	<?= $form->field($model, 'type')->dropDownList([
+		1 => '公司新闻', 
+		2 => '行业资讯', 
+		3 => '基金公告', 
+		4 => '投资案例',
+		5 => '军民融合',
+		6 => '能源产业',
+		7 => '文化旅游',
+		8 => '投资知识',
+	]) ?>
 
     <div class="form-group">
 		<?= $model->isNewRecord?'':Html::resetButton('重置', ['class' => 'btn btn-primary'])?>

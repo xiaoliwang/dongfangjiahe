@@ -138,7 +138,7 @@ class SiteController extends Controller
     	$this->getView()->title = '新闻动态';
     	
     	$type = Yii::$app->request->get('type', 1);
-    	if(!in_array($type, [1, 2, 3]))
+    	if(!in_array($type, [1, 2, 3, 5, 6, 7, 8]))
     		$type = 1;
     	
     	$query = News::find()->where("type = $type");
@@ -166,7 +166,7 @@ class SiteController extends Controller
     	]);
     }
     
-    public function actionCase(int $year) {
+    public function actionCase() {
     	Yii::$app->view->registerCssFile('/css/animate.min.css');
     	Yii::$app->view->registerCssFile('/css/swiper.min.css');
     	Yii::$app->view->registerJsFile('/js/jquery.min.js');
@@ -181,15 +181,17 @@ class SiteController extends Controller
     		'totalCount' => $query->count(),
     	]);
     	
+	/*
     	$year_str = $year . '0101';
     	$next_year_str = $year + 1 . '0101';
     	$start_unix = strtotime($year_str);
     	$end_unix = strtotime($next_year_str);
-    	
+    	*/
+
     	$news = $query->orderBy('date DESC')
     	->offset($pagination->offset)
     	->limit($pagination->limit)
-    	->andWhere(['between', 'date', $start_unix, $end_unix])
+    	// ->andWhere(['between', 'date', $start_unix, $end_unix])
     	->all();
     	return $this->render('case', [
     			'news' => $news,
